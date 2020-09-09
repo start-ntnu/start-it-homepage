@@ -36,6 +36,11 @@
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.41"
+    "awesome-typescript-loader": "^5.2.1",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-typescript": "^2.4.18",
+    "reset-css": "^5.0.1",
+    "source-map-loader": "^1.1.0",
+    "styled-components": "^5.1.1"
   }
 }
