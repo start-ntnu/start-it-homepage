@@ -7,10 +7,22 @@ const clientConfig = require("./client-config");
 
 const isProd = process.env.NODE_ENV === "production";
 
+const path = require(`path`);
+
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-source-sanity",
       options: {
