@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 
-export default function App({ data }) {
+export default function Blog({ data }) {
   return (
     <div className="App">
       <Header />

@@ -16,7 +16,7 @@ export const query = graphql`
   }
 `;
 
-export default function App({ data }) {
+export default function Partners({ data }) {
   return (
     <div className="App">
       <Header />
@@ -33,7 +33,7 @@ export default function App({ data }) {
           <ImageWrapper>
             <Img
               fluid={data.Facebook.childImageSharp.fluid}
-              alt="StartIt logo"
+              alt="Facebook logo"
             />
           </ImageWrapper>
           <PartnerInfo>
@@ -45,11 +45,12 @@ export default function App({ data }) {
               condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
               scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
               nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Nulla sodales arcu vel augue accumsan, a vulputate
-              nunc lacinia. Donec eget libero vitae velit elementum egestas in
-              et eros.
+              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
+              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
+              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+              eget urna sagittis sodales.
             </Article>
           </PartnerInfo>
         </Partner>
@@ -57,7 +58,7 @@ export default function App({ data }) {
           <ImageWrapper>
             <Img
               fluid={data.Facebook.childImageSharp.fluid}
-              alt="StartIt logo"
+              alt="Facebook logo"
             />
           </ImageWrapper>
           <PartnerInfo>
@@ -69,20 +70,21 @@ export default function App({ data }) {
               condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
               scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
               nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Nulla sodales arcu vel augue accumsan, a vulputate
-              nunc lacinia. Donec eget libero vitae velit elementum egestas in
-              et eros.
+              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
+              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
+              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+              eget urna sagittis sodales.
             </Article>
           </PartnerInfo>
         </Partner>
-        <Title>Partnere</Title>
+        <Title>SamarbeidsPartnere</Title>
         <Partner>
           <ImageWrapper>
             <Img
               fluid={data.Facebook.childImageSharp.fluid}
-              alt="StartIt logo"
+              alt="Facebook logo"
             />
           </ImageWrapper>
           <PartnerInfo>
@@ -94,35 +96,12 @@ export default function App({ data }) {
               condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
               scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
               nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Nulla sodales arcu vel augue accumsan, a vulputate
-              nunc lacinia. Donec eget libero vitae velit elementum egestas in
-              et eros.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="StartIt logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Nulla sodales arcu vel augue accumsan, a vulputate
-              nunc lacinia. Donec eget libero vitae velit elementum egestas in
-              et eros.
+              nisi. Fusce vestibulum elit eget urna sagittis sodales. et eros.
+              Duis suscipit hendrerit lorem, ac condimentum elit rutrum et.
+              Quisque ultrices, dolor vitae suscipit scelerisque, nibh leo
+              dignissim felis, non sollicitudin leo sem et nisi. Nullam mauris
+              nulla, semper et neque at, dictum venenatis nisi. Fusce vestibulum
+              elit eget urna sagittis sodales.
             </Article>
           </PartnerInfo>
         </Partner>
@@ -130,7 +109,7 @@ export default function App({ data }) {
           <ImageWrapper>
             <Img
               fluid={data.Facebook.childImageSharp.fluid}
-              alt="StartIt logo"
+              alt="facebook logo"
             />
           </ImageWrapper>
           <PartnerInfo>
@@ -142,11 +121,38 @@ export default function App({ data }) {
               condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
               scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
               nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Nulla sodales arcu vel augue accumsan, a vulputate
-              nunc lacinia. Donec eget libero vitae velit elementum egestas in
-              et eros.
+              nisi. Fusce vestibulum elit eget urna sagittis sodales. et eros.
+              Duis suscipit hendrerit lorem, ac condimentum elit rutrum et.
+              Quisque ultrices, dolor vitae suscipit scelerisque, nibh leo
+              dignissim felis, non sollicitudin leo sem et nisi. Nullam mauris
+              nulla, semper et neque at, dictum venenatis nisi. Fusce vestibulum
+              elit eget urna sagittis sodales.
+            </Article>
+          </PartnerInfo>
+        </Partner>
+        <Title>StandPartnere</Title>
+        <Partner>
+          <ImageWrapper>
+            <Img
+              fluid={data.Facebook.childImageSharp.fluid}
+              alt="Facebook logo"
+            />
+          </ImageWrapper>
+          <PartnerInfo>
+            <PartnerName>Facebook</PartnerName>
+            <Article>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
+              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
+              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
+              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
+              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
+              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
+              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
+              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+              eget urna sagittis sodales.
             </Article>
           </PartnerInfo>
         </Partner>
@@ -171,7 +177,7 @@ const Title = styled.h1`
 `;
 
 const Article = styled.p`
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,7 +196,7 @@ const Partner = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 5%;
-  width: 90%;
+  width: 100%;
   height: 15%;
   @media (max-width: 1268px) {
     flex-direction: column;
@@ -198,12 +204,13 @@ const Partner = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  margin: auto;
+  margin-top: 20%;
   height: 100%;
   width: 100%;
   @media (max-width: 1268px) {
-    height: 50%;
-    width: 50%;
+    margin: auto;
+    height: 20%;
+    width: 20%;
   }
 `;
 const PartnerInfo = styled.div`
