@@ -33,5 +33,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-typescript",
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Open Sans`],
+        display: "swap",
+      },
+    },
   ],
 };

@@ -9,7 +9,18 @@ export default function App({ data }) {
       <Title>Årets StartIT blir på Clarion, Brattøra 04.03.2021 </Title>
       <Program>
         <Article>
-          17.00 dørene åpner og mingling starter 17.30 Workshop starter
+          17.00 dørene åpner og mingling starter <br></br>
+          17.30 Workshop runden starter, 3 workshopper og en mingle stasjon
+          <br></br>
+          18.00 Bytte<br></br>
+          18.30 Bytte<br></br>
+          19.00 Bytte <br></br>
+          19.30 Middag <br></br>
+          20.00 Foredrag fra HSP 1<br></br>
+          20.20 IT foredrag<br></br>
+          20.50 Foredrag fra HSP 2<br></br>
+          21.10 Inspirerende foredrag<br></br>
+          21.40 Avslutning
         </Article>
       </Program>
     </div>
@@ -44,8 +55,8 @@ const Article = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  margin-left: 10%;
+  text-align: left;
+  margin-left: 30%;
   margin-right: 10%;
   @media (max-width: 1268px) {
     font-size: 24px;

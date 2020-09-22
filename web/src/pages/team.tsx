@@ -121,14 +121,16 @@ const Title = styled.h1`
 const PictureContainer = styled.div`
   display: flex;
   flex-direction: row;
+  width: 80%;
+  margin: auto;
 `;
 
 const PersonContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 15%;
-  height: 30%;
+  width: 20%;
+  height: 40%;
 `;
 
 const ImageWrapper = styled.div`
