@@ -39,7 +39,7 @@ export const membersQuery = graphql`
       }
     }
 
-    Casper: file(relativePath: { eq: "members/Casper.png" }) {
+    Casper: file(relativePath: { eq: "members/Casper.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -102,7 +102,7 @@ export default function Team({ data }) {
 
 const Name = styled.h2`
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +115,7 @@ const Name = styled.h2`
 const Email = styled.h2`
   margin-top: 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -14,7 +14,7 @@ const Toggle = styled.div`
   }
 `;
 const Hamburger = styled.div`
-  background-color: black;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -26,7 +26,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -83,7 +83,7 @@ const NavbarDiv = styled.nav`
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
-  background-color: white;
+  background-color: black;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;

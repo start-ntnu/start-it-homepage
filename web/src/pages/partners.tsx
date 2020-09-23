@@ -172,21 +172,21 @@ export default function Partners({ data }) {
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 42px;
+    font-size: 36px;
   }
   @media (max-width: 800px) {
-    font-size: 30px;
+    font-size: 26px;
   }
 `;
 
 const Article = styled.p`
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,7 +194,7 @@ const Article = styled.p`
   margin-left: 10%;
   margin-right: 10%;
   @media (max-width: 1268px) {
-    font-size: 24px;
+    font-size: 15px;
   }
 `;
 
@@ -213,9 +213,9 @@ const Partner = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  margin-top: 20%;
-  height: 100%;
-  width: 100%;
+  margin: auto;
+  height: 70%;
+  width: 70%;
   @media (max-width: 1268px) {
     margin: auto;
     height: 20%;

@@ -54,12 +54,13 @@ const HeaderStyle = styled.header`
   width: 100%;
   justify-content: space-between;
   padding-left: 32px;
-  background-color: white;
+  background-color: black;
+  margin: 0px;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
-  color: Black;
+  color: white;
   font-size: 2vh;
   line-height: 2;
   margin-left: 2vh;
@@ -81,4 +82,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 100%;
+  padding: 0px;
+`;
