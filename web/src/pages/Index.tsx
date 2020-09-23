@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Header from "../components/Header";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-
+import { GlobalStyle } from "../globalStyles";
 export const query = graphql`
   query {
     StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
@@ -27,22 +27,59 @@ export const query = graphql`
 export default function App({ data }) {
   return (
     <div className="App">
-      <Header />
-      <ImageWrapper>
-        <StartITlogo>
-          <Img fluid={data.StartIT.childImageSharp.fluid} alt="StartIt logo" />
-        </StartITlogo>
-        <Title>StartIT 2020</Title>
-        <StartNTNUlogo>
-          <Img
-            fluid={data.StartNTNU.childImageSharp.fluid}
-            alt="StartNTNU logo"
-          />
-        </StartNTNUlogo>
-      </ImageWrapper>
+      <Fragment>
+        <GlobalStyle></GlobalStyle>
+        <Header />
+        <ImageWrapper>
+          <StartITlogo>
+            <Img
+              fluid={data.StartIT.childImageSharp.fluid}
+              alt="StartIt logo"
+            />
+          </StartITlogo>
+          <Title>StartIT 2020</Title>
+          <Article>
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
+            laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
+            condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
+            scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
+            nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
+            nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
+            suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
+            ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+            felis, non sollicitudin leo sem et nisi. Nullam mauris nulla, semper
+            et neque at, dictum venenatis nisi. Fusce vestibulum elit eget urna
+            sagittis sodales.
+          </Article>
+          <StartNTNUlogo>
+            <Img
+              fluid={data.StartNTNU.childImageSharp.fluid}
+              alt="StartNTNU logo"
+            />
+          </StartNTNUlogo>
+        </ImageWrapper>
+      </Fragment>
     </div>
   );
 }
+
+const Article = styled.p`
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 1268px) {
+    font-size: 24px;
+  }
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`;
 
 const ImageWrapper = styled.div`
   display: flex;

@@ -55,6 +55,7 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   padding-left: 32px;
   background-color: black;
+  margin: 0px;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
@@ -81,4 +82,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 100%;
+  padding: 0px;
+`;

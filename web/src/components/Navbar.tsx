@@ -9,7 +9,7 @@ const Toggle = styled.div`
   cursor: pointer;
   padding: 0 10vw;
 
-  @media (max-width: 1268px) {
+  @media (max-width: 1000px) {
     display: flex;
   }
 `;
@@ -75,7 +75,7 @@ export default function Navbar() {
 const NavbarDiv = styled.nav`
   display: flex;
   flex-direction: row;
-  @media (max-width: 1268px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
@@ -87,13 +87,12 @@ const Navigation = styled.nav`
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
   margin: auto 5vh auto auto;
 
   z-index: 2;
   align-self: center;
 
-  @media (max-width: 1268px) {
+  @media (max-width: 1000px) {
     position: sticky;
     height: 8vh;
     top: 0;
@@ -110,7 +109,7 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  @media (max-width: 1268px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     position: fixed;
     width: 100%;

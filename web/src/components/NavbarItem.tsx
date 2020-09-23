@@ -18,4 +18,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
   font-size: 3vh;
   line-height: 2;
   margin-left: 5vh;
+  @media (max-width: 1000px) {
+    color: white;
+  }
 `;
