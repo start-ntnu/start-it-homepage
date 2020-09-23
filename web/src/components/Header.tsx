@@ -54,12 +54,12 @@ const HeaderStyle = styled.header`
   width: 100%;
   justify-content: space-between;
   padding-left: 32px;
-  background-color: black;
+  background-color: white;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
-  color: white;
+  color: Black;
   font-size: 2vh;
   line-height: 2;
   margin-left: 2vh;

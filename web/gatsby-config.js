@@ -12,6 +12,17 @@ const path = require(`path`);
 module.exports = {
   plugins: [
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`, `800`],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -33,12 +44,5 @@ module.exports = {
       },
     },
     "gatsby-plugin-typescript",
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Open Sans`],
-        display: "swap",
-      },
-    },
   ],
 };

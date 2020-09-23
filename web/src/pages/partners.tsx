@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Header from "../components/Header";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import { GlobalStyle } from "../globalStyles";
 
 export const query = graphql`
   query {
@@ -19,144 +20,152 @@ export const query = graphql`
 export default function Partners({ data }) {
   return (
     <div className="App">
-      <Header />
-      <Title>Samarbeidspartnere</Title>
-      <Article>
-        Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en del
-        av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen av
-        NTUS`s mest engasjerte og ny tenkende studenter og være med på å
-        inspirere dem? Da er det bare å ta kontakt!
-      </Article>
-      <PartnerWrapper>
-        <Title>Hovedpartnere</Title>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="Facebook logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
-              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
-              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
-              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
-              eget urna sagittis sodales.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="Facebook logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
-              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
-              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
-              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
-              eget urna sagittis sodales.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-        <Title>SamarbeidsPartnere</Title>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="Facebook logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. et eros.
-              Duis suscipit hendrerit lorem, ac condimentum elit rutrum et.
-              Quisque ultrices, dolor vitae suscipit scelerisque, nibh leo
-              dignissim felis, non sollicitudin leo sem et nisi. Nullam mauris
-              nulla, semper et neque at, dictum venenatis nisi. Fusce vestibulum
-              elit eget urna sagittis sodales.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="facebook logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. et eros.
-              Duis suscipit hendrerit lorem, ac condimentum elit rutrum et.
-              Quisque ultrices, dolor vitae suscipit scelerisque, nibh leo
-              dignissim felis, non sollicitudin leo sem et nisi. Nullam mauris
-              nulla, semper et neque at, dictum venenatis nisi. Fusce vestibulum
-              elit eget urna sagittis sodales.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-        <Title>StandPartnere</Title>
-        <Partner>
-          <ImageWrapper>
-            <Img
-              fluid={data.Facebook.childImageSharp.fluid}
-              alt="Facebook logo"
-            />
-          </ImageWrapper>
-          <PartnerInfo>
-            <PartnerName>Facebook</PartnerName>
-            <Article>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-              fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-              laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-              condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-              scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-              nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-              nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
-              suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
-              ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-              felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
-              semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
-              eget urna sagittis sodales.
-            </Article>
-          </PartnerInfo>
-        </Partner>
-      </PartnerWrapper>
+      <Fragment>
+        <GlobalStyle></GlobalStyle>
+        <Header />
+        <Title>Samarbeidspartnere</Title>
+        <Article>
+          Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en
+          del av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen
+          av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
+          inspirere dem? Da er det bare å ta kontakt!
+        </Article>
+        <PartnerWrapper>
+          <Title>Hovedpartnere</Title>
+          <Partner>
+            <ImageWrapper>
+              <Img
+                fluid={data.Facebook.childImageSharp.fluid}
+                alt="Facebook logo"
+              />
+            </ImageWrapper>
+            <PartnerInfo>
+              <PartnerName>Facebook</PartnerName>
+              <Article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                fringilla diam ac fringilla ornare. Maecenas in arcu
+                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
+                hendrerit lorem, ac condimentum elit rutrum et. Quisque
+                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+                eget urna sagittis sodales. Duis suscipit hendrerit lorem, ac
+                condimentum elit rutrum et. Quisque ultrices, dolor vitae
+                suscipit scelerisque, nibh leo dignissim felis, non sollicitudin
+                leo sem et nisi. Nullam mauris nulla, semper et neque at, dictum
+                venenatis nisi. Fusce vestibulum elit eget urna sagittis
+                sodales.
+              </Article>
+            </PartnerInfo>
+          </Partner>
+          <Partner>
+            <ImageWrapper>
+              <Img
+                fluid={data.Facebook.childImageSharp.fluid}
+                alt="Facebook logo"
+              />
+            </ImageWrapper>
+            <PartnerInfo>
+              <PartnerName>Facebook</PartnerName>
+              <Article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                fringilla diam ac fringilla ornare. Maecenas in arcu
+                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
+                hendrerit lorem, ac condimentum elit rutrum et. Quisque
+                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+                eget urna sagittis sodales. Duis suscipit hendrerit lorem, ac
+                condimentum elit rutrum et. Quisque ultrices, dolor vitae
+                suscipit scelerisque, nibh leo dignissim felis, non sollicitudin
+                leo sem et nisi. Nullam mauris nulla, semper et neque at, dictum
+                venenatis nisi. Fusce vestibulum elit eget urna sagittis
+                sodales.
+              </Article>
+            </PartnerInfo>
+          </Partner>
+          <Title>SamarbeidsPartnere</Title>
+          <Partner>
+            <ImageWrapper>
+              <Img
+                fluid={data.Facebook.childImageSharp.fluid}
+                alt="Facebook logo"
+              />
+            </ImageWrapper>
+            <PartnerInfo>
+              <PartnerName>Facebook</PartnerName>
+              <Article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                fringilla diam ac fringilla ornare. Maecenas in arcu
+                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
+                hendrerit lorem, ac condimentum elit rutrum et. Quisque
+                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+                eget urna sagittis sodales. et eros. Duis suscipit hendrerit
+                lorem, ac condimentum elit rutrum et. Quisque ultrices, dolor
+                vitae suscipit scelerisque, nibh leo dignissim felis, non
+                sollicitudin leo sem et nisi. Nullam mauris nulla, semper et
+                neque at, dictum venenatis nisi. Fusce vestibulum elit eget urna
+                sagittis sodales.
+              </Article>
+            </PartnerInfo>
+          </Partner>
+          <Partner>
+            <ImageWrapper>
+              <Img
+                fluid={data.Facebook.childImageSharp.fluid}
+                alt="facebook logo"
+              />
+            </ImageWrapper>
+            <PartnerInfo>
+              <PartnerName>Facebook</PartnerName>
+              <Article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                fringilla diam ac fringilla ornare. Maecenas in arcu
+                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
+                hendrerit lorem, ac condimentum elit rutrum et. Quisque
+                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+                eget urna sagittis sodales. et eros. Duis suscipit hendrerit
+                lorem, ac condimentum elit rutrum et. Quisque ultrices, dolor
+                vitae suscipit scelerisque, nibh leo dignissim felis, non
+                sollicitudin leo sem et nisi. Nullam mauris nulla, semper et
+                neque at, dictum venenatis nisi. Fusce vestibulum elit eget urna
+                sagittis sodales.
+              </Article>
+            </PartnerInfo>
+          </Partner>
+          <Title>StandPartnere</Title>
+          <Partner>
+            <ImageWrapper>
+              <Img
+                fluid={data.Facebook.childImageSharp.fluid}
+                alt="Facebook logo"
+              />
+            </ImageWrapper>
+            <PartnerInfo>
+              <PartnerName>Facebook</PartnerName>
+              <Article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                fringilla diam ac fringilla ornare. Maecenas in arcu
+                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
+                hendrerit lorem, ac condimentum elit rutrum et. Quisque
+                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
+                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
+                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
+                eget urna sagittis sodales. Duis suscipit hendrerit lorem, ac
+                condimentum elit rutrum et. Quisque ultrices, dolor vitae
+                suscipit scelerisque, nibh leo dignissim felis, non sollicitudin
+                leo sem et nisi. Nullam mauris nulla, semper et neque at, dictum
+                venenatis nisi. Fusce vestibulum elit eget urna sagittis
+                sodales.
+              </Article>
+            </PartnerInfo>
+          </Partner>
+        </PartnerWrapper>
+      </Fragment>
     </div>
   );
 }

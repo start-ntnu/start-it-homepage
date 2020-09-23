@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Header from "../components/Header";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import { GlobalStyle } from "../globalStyles";
 
 export const membersQuery = graphql`
   query {
@@ -51,42 +52,50 @@ export const membersQuery = graphql`
 export default function Team({ data }) {
   return (
     <div className="App">
-      <Header />
-      <Title>The team</Title>
-      <PictureContainer>
-        <PersonContainer>
-          <ImageWrapper>
-            <Img fluid={data.Isabel.childImageSharp.fluid} alt="Isabel" />
-          </ImageWrapper>
-          <Name>Isabel</Name>
-        </PersonContainer>
-        <PersonContainer>
-          <ImageWrapper>
-            <Img fluid={data.Andreas.childImageSharp.fluid} alt="Andreas" />
-          </ImageWrapper>
-          <Name>Andreas</Name>
-        </PersonContainer>
-        <PersonContainer>
-          <ImageWrapper>
-            <Img fluid={data.Mille.childImageSharp.fluid} alt="Mille" />
-          </ImageWrapper>
-          <Name>Mille</Name>
-        </PersonContainer>
-      </PictureContainer>
-      <PictureContainer>
-        <PersonContainer>
-          <ImageWrapper>
-            <Img fluid={data.Snorre.childImageSharp.fluid} alt="Snorre" />
-          </ImageWrapper>
-          <Name>Snorre</Name>
-        </PersonContainer>
-        <PersonContainer>
-          <ImageWrapper>
-            <Img fluid={data.Casper.childImageSharp.fluid} alt="Casper" />
-          </ImageWrapper>
-          <Name>Casper</Name>
-        </PersonContainer>
-      </PictureContainer>
+      <Fragment>
+        <GlobalStyle></GlobalStyle>
+        <Header />
+        <Title>The team</Title>
+        <PictureContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Isabel.childImageSharp.fluid} alt="Isabel" />
+            </ImageWrapper>
+            <Name>Isabel</Name>
+            <Email>isabel.slorer@startntnu.no </Email>
+          </PersonContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Andreas.childImageSharp.fluid} alt="Andreas" />
+            </ImageWrapper>
+            <Name>Andreas</Name>
+            <Email>andreas.rikheim@startntnu.no </Email>
+          </PersonContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Mille.childImageSharp.fluid} alt="Mille" />
+            </ImageWrapper>
+            <Name>Mille</Name>
+            <Email>mille.richardsen@startntnu.no </Email>
+          </PersonContainer>
+        </PictureContainer>
+        <PictureContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Snorre.childImageSharp.fluid} alt="Snorre" />
+            </ImageWrapper>
+            <Name>Snorre</Name>
+            <Email>snorre.barku@startntnu.no</Email>
+          </PersonContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Casper.childImageSharp.fluid} alt="Casper" />
+            </ImageWrapper>
+            <Name>Casper</Name>
+            <Email>casper.feng@startntnu.no</Email>
+          </PersonContainer>
+        </PictureContainer>
+      </Fragment>
     </div>
   );
 }
@@ -98,8 +107,21 @@ const Name = styled.h2`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-bottom: 0;
   @media (max-width: 1268px) {
     font-size: 26px;
+  }
+`;
+const Email = styled.h2`
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 1268px) {
+    font-size: 18px;
   }
 `;
 
@@ -123,6 +145,9 @@ const PictureContainer = styled.div`
   flex-direction: row;
   width: 80%;
   margin: auto;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const PersonContainer = styled.div`
@@ -131,14 +156,14 @@ const PersonContainer = styled.div`
   margin: auto;
   width: 20%;
   height: 40%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    width: 40%;
+  }
 `;
 
 const ImageWrapper = styled.div`
   margin: auto;
   height: 100%;
   width: 100%;
-  @media (max-width: 1268px) {
-    height: 50%;
-    width: 50%;
-  }
 `;

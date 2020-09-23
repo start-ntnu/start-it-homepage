@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import Header from "../components/Header";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import { GlobalStyle } from "../globalStyles";
 
 export const query = graphql`
   query {
@@ -19,23 +20,26 @@ export const query = graphql`
 export default function App({ data }) {
   return (
     <div className="App">
-      <Header />
-      <ImageWrapper>
-        <Img
-          fluid={data.StartNTNU.childImageSharp.fluid}
-          alt="StartNTNU logo"
-        />
-      </ImageWrapper>
-      <Title>Hvem er vi?</Title>
-      <Article>
-        Start NTNU er en non-profitt studentorganisasjon som jobber for at
-        innovasjonsmiljøet på NTNU skal vokse og bli enda bedre! Dette gjør vi
-        gjennom å avholde små og store arrangement for å inspirere nettopp DEG.
-        Vi ønsker å nå ut til flest mulig av studentene på NTNU og jobber for å
-        opprettholde et bredt utvalg av tematikk. Sitter du med en idè eller
-        lurer på om du har en gründer i magen? Kom på arrangementene og la deg
-        inspirere!
-      </Article>
+      <Fragment>
+        <GlobalStyle></GlobalStyle>
+        <Header />
+        <ImageWrapper>
+          <Img
+            fluid={data.StartNTNU.childImageSharp.fluid}
+            alt="StartNTNU logo"
+          />
+        </ImageWrapper>
+        <Title>Hvem er vi?</Title>
+        <Article>
+          Start NTNU er en non-profitt studentorganisasjon som jobber for at
+          innovasjonsmiljøet på NTNU skal vokse og bli enda bedre! Dette gjør vi
+          gjennom å avholde små og store arrangement for å inspirere nettopp
+          DEG. Vi ønsker å nå ut til flest mulig av studentene på NTNU og jobber
+          for å opprettholde et bredt utvalg av tematikk. Sitter du med en idè
+          eller lurer på om du har en gründer i magen? Kom på arrangementene og
+          la deg inspirere!
+        </Article>
+      </Fragment>
     </div>
   );
 }
