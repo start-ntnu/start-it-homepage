@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { GlobalStyle } from "../globalStyles";
 
 export const membersQuery = graphql`
   query {
@@ -51,10 +50,8 @@ export const membersQuery = graphql`
 
 export default function Team({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
+    <Layout>
+      <div className="App">
         <Title>The team</Title>
         <PictureContainer>
           <PersonContainer>
@@ -95,8 +92,8 @@ export default function Team({ data }) {
             <Email>casper.feng@startntnu.no</Email>
           </PersonContainer>
         </PictureContainer>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

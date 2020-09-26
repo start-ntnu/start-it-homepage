@@ -1,14 +1,10 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
-import { GlobalStyle } from "../globalStyles";
+import Layout from "../components/Blog";
 
 export default function Blog({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
-      </Fragment>
-    </div>
+    <Layout>
+      <h1>Blog</h1>
+    </Layout>
   );
 }

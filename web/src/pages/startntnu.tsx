@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
-import { GlobalStyle } from "../globalStyles";
 
 export const query = graphql`
   query {
@@ -19,10 +18,8 @@ export const query = graphql`
 
 export default function App({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
+    <Layout>
+      <div className="App">
         <ImageWrapper>
           <Img
             fluid={data.StartNTNU.childImageSharp.fluid}
@@ -39,8 +36,8 @@ export default function App({ data }) {
           eller lurer på om du har en gründer i magen? Kom på arrangementene og
           la deg inspirere!
         </Article>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
@@ -54,18 +51,18 @@ const ImageWrapper = styled.div`
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 42px;
+    font-size: 30px;
   }
 `;
 
 const Article = styled.p`
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,6 +70,6 @@ const Article = styled.p`
   margin-left: 10%;
   margin-right: 10%;
   @media (max-width: 1268px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;

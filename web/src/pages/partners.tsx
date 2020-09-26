@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { GlobalStyle } from "../globalStyles";
+import Layout from "../components/Blog";
 
 export const query = graphql`
   query {
@@ -19,9 +19,8 @@ export const query = graphql`
 
 export default function Partners({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
+    <Layout>
+      <div className="App">
         <Header />
         <Title>Samarbeidspartnere</Title>
         <Article>
@@ -165,8 +164,8 @@ export default function Partners({ data }) {
             </PartnerInfo>
           </Partner>
         </PartnerWrapper>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

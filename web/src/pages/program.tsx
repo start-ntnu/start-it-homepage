@@ -1,14 +1,11 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
 import styled from "styled-components";
-import { GlobalStyle } from "../globalStyles";
+import Layout from "../components/Blog";
 
 export default function App({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
+    <Layout>
+      <div className="App">
         <Title>Årets StartIT blir på Clarion, Brattøra 04.03.2021 </Title>
         <Program>
           <Article>
@@ -26,23 +23,23 @@ export default function App({ data }) {
             21.40 Avslutning
           </Article>
         </Program>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 42px;
+    font-size: 30px;
   }
   @media (max-width: 800px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 
@@ -55,7 +52,7 @@ const Program = styled.div`
 
 const Article = styled.p`
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +60,7 @@ const Article = styled.p`
   margin-left: 30%;
   margin-right: 10%;
   @media (max-width: 1268px) {
-    font-size: 24px;
+    font-size: 20px;
   }
   @media (max-width: 800px) {
     font-size: 16px;

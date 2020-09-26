@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Blog";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { GlobalStyle } from "../globalStyles";
 export const query = graphql`
   query {
     StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
@@ -26,10 +25,8 @@ export const query = graphql`
 
 export default function App({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
+    <Layout>
+      <div className="App">
         <ImageWrapper>
           <StartITlogo>
             <Img
@@ -60,13 +57,13 @@ export default function App({ data }) {
             />
           </StartNTNUlogo>
         </ImageWrapper>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 const Article = styled.p`
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +71,7 @@ const Article = styled.p`
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 1268px) {
-    font-size: 24px;
+    font-size: 16px;
   }
   @media (max-width: 800px) {
     font-size: 16px;
@@ -87,8 +84,8 @@ const ImageWrapper = styled.div`
   margin-top: 6%;
   margin-left: auto;
   margin-right: auto;
-  height: 70%;
-  width: 70%;
+  height: 60%;
+  width: 60%;
 `;
 
 const StartNTNUlogo = styled.div`
@@ -116,13 +113,13 @@ const StartITlogo = styled.div`
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-top: 7%;
   @media (max-width: 1268px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
