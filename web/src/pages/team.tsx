@@ -121,13 +121,13 @@ const Name = styled.h2`
 const Email = styled.h2`
   margin-top: 0;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 16px;
+    font-size: 18px;
   }
   @media (max-width: 800px) {
     font-size: 14px;

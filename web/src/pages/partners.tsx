@@ -191,8 +191,8 @@ const Article = styled.p`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   @media (max-width: 1268px) {
     font-size: 15px;
   }

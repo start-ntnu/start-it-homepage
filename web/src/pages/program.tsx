@@ -89,7 +89,7 @@ const Mingling = styled.div`
   width: 25%;
   display: flex;
   flex-direction: column;
-  border: groove 10px lightblue;
+  border: solid 10px lightblue;
   @media (max-width: 800px) {
     width: 35%;
   }
@@ -104,7 +104,7 @@ const InteraktivtOpplegg = styled.div`
   width: 35%;
   display: flex;
   flex-direction: column;
-  border: groove 12px lightblue;
+  border: solid 12px lightblue;
   @media (max-width: 550px) {
     width: 50%;
   }
@@ -116,7 +116,7 @@ const Bankett = styled.div`
   width: 25%;
   display: flex;
   flex-direction: column;
-  border: groove 12px lightblue;
+  border: solid 12px lightblue;
   @media (max-width: 800px) {
     width: 35%;
   }

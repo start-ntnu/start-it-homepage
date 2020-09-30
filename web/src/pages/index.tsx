@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { GlobalStyle } from "../globalStyles";
+import StartITVideo from "../assets/startit.mp4";
 export const query = graphql`
   query {
     StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
@@ -30,13 +31,13 @@ export default function App({ data }) {
       <Fragment>
         <GlobalStyle></GlobalStyle>
         <Header />
+        <VideoWrapper>
+          <video height="100%" width="100%" loop muted autoPlay>
+            <source src={StartITVideo} type="video/mp4" />
+          </video>
+        </VideoWrapper>
+
         <ImageWrapper>
-          <StartITlogo>
-            <Img
-              fluid={data.StartIT.childImageSharp.fluid}
-              alt="StartIt logo"
-            />
-          </StartITlogo>
           <Title>StartIT 2020</Title>
           <Article>
             {" "}
@@ -91,6 +92,18 @@ const ImageWrapper = styled.div`
   margin-right: auto;
   height: 70%;
   width: 70%;
+`;
+
+const VideoWrapper = styled.div`
+  margin-top: -12%;
+  box-shadow: 3px 3px 6px 1px rgba(14, 13, 13, 0.65);
+`;
+
+const BorderDiv = styled.div`
+  margin-top: -0.4%;
+  height: 13px;
+  background-color: grey;
+  opacity: 50%;
 `;
 
 const StartNTNUlogo = styled.div`
