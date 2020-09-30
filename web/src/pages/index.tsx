@@ -40,18 +40,20 @@ export default function App({ data }) {
           <Title>StartIT 2020</Title>
           <Article>
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-            fringilla diam ac fringilla ornare. Maecenas in arcu consectetur,
-            laoreet nunc quis, lacinia nisi. Duis suscipit hendrerit lorem, ac
-            condimentum elit rutrum et. Quisque ultrices, dolor vitae suscipit
-            scelerisque, nibh leo dignissim felis, non sollicitudin leo sem et
-            nisi. Nullam mauris nulla, semper et neque at, dictum venenatis
-            nisi. Fusce vestibulum elit eget urna sagittis sodales. Duis
-            suscipit hendrerit lorem, ac condimentum elit rutrum et. Quisque
-            ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-            felis, non sollicitudin leo sem et nisi. Nullam mauris nulla, semper
-            et neque at, dictum venenatis nisi. Fusce vestibulum elit eget urna
-            sagittis sodales.
+            På NTNU utdannes det for øyeblikket mange tusen studenter som snart
+            skal ut i jobb og må finne ut hva de vil jobbe med. <br></br>
+            <br></br>
+            StartIT har som formål å motivere og inspirere studentene ved NTNU
+            til å ville jobbe med å løse problemer ved hjelp av innovasjon og
+            teknologien som de lærer her på NTNU. <br></br>
+            <br></br>Vi ønsker å skifte fokuset fra “hvor kan man tjene mest
+            penger” til “hvordan kan man være med å løse de mest spennende
+            problemene vi står ovenfor i dag”.
+            <br></br> <br></br>Dette forsøker vi å gjøre ved å vise mulighetene
+            som finnes til å jobbe med innovasjon innenfor teknologi. Det kan
+            være alt fra å vise frem de mest innovative inhouse bedriftene, de
+            mest kreative konsulentselskapene, de kuleste startupsene, eller
+            hvordan man kan starte noe eget.
           </Article>
           <StartNTNUlogo>
             <Img
