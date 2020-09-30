@@ -25,7 +25,7 @@ export default function Header() {
         </StyledLink>
         <Navbar></Navbar>
       </HeaderStyle>
-      <PictureContainer>
+      {/*<PictureContainer>
         <ImageWrapper>
           <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
         </ImageWrapper>
@@ -44,7 +44,7 @@ export default function Header() {
         <ImageWrapper>
           <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
         </ImageWrapper>
-      </PictureContainer>
+      </PictureContainer>*/}
     </Wrapper>
   );
 }

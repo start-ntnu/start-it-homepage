@@ -9,7 +9,7 @@ export default function App({ data }) {
       <Fragment>
         <GlobalStyle></GlobalStyle>
         <Header />
-        <Title>Årets StartIT blir på Clarion, Brattøra 04.03.2021 </Title>
+        <Title>Start IT 2021 </Title>
         <Program>
           <Mingling>
             <ProgramTitle>Mingling</ProgramTitle>
@@ -89,7 +89,7 @@ const Mingling = styled.div`
   width: 25%;
   display: flex;
   flex-direction: column;
-  border: solid 10px lightblue;
+  border: solid 10px #9fbfdf;
   @media (max-width: 800px) {
     width: 35%;
   }
@@ -104,7 +104,7 @@ const InteraktivtOpplegg = styled.div`
   width: 35%;
   display: flex;
   flex-direction: column;
-  border: solid 12px lightblue;
+  border: solid 12px #9fbfdf;
   @media (max-width: 550px) {
     width: 50%;
   }
@@ -116,7 +116,7 @@ const Bankett = styled.div`
   width: 25%;
   display: flex;
   flex-direction: column;
-  border: solid 12px lightblue;
+  border: solid 12px #9fbfdf;
   @media (max-width: 800px) {
     width: 35%;
   }

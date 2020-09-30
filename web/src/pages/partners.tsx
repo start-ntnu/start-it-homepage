@@ -30,7 +30,7 @@ export default function Partners({ data }) {
           av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
           inspirere dem? Da er det bare å ta kontakt!
         </Article>
-        <PartnerWrapper>
+        {/*<PartnerWrapper>
           <Title>Hovedpartnere</Title>
           <Partner>
             <ImageWrapper>
@@ -164,7 +164,7 @@ export default function Partners({ data }) {
               </Article>
             </PartnerInfo>
           </Partner>
-        </PartnerWrapper>
+        </PartnerWrapper> */}
       </Fragment>
     </div>
   );
