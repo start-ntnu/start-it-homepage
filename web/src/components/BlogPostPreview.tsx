@@ -11,11 +11,11 @@ function BlogPostPreview(props) {
     <StyledLink to={getBlogUrl(props.publishedAt, props.slug.current)}>
       <div>
         {props.mainImage && props.mainImage.asset && (
-          <img
+          <StyledImage
             src={
               imageUrlFor(buildImageObj(props.mainImage))
-                .width(600)
-                .height(Math.floor((9 / 16) * 600))
+                .width(450)
+                .height(Math.floor((9 / 16) * 450))
                 .auto("format")
                 .url()!
             }
@@ -24,13 +24,13 @@ function BlogPostPreview(props) {
         )}
       </div>
       <BlogInfo>
-        <h3>{props.title}</h3>
+        <ExcerptTitle>{props.title}</ExcerptTitle>
         {props._rawExcerpt && (
-          <div>
+          <ExcerptText>
             <PortableText blocks={props._rawExcerpt} />
-          </div>
+          </ExcerptText>
         )}
-        <div>{format(props.publishedAt, "MMMM Do, YYYY")}</div>
+        <ExcerptText>{format(props.publishedAt, "MMMM Do, YYYY")}</ExcerptText>
       </BlogInfo>
     </StyledLink>
   );
@@ -40,6 +40,35 @@ const BlogInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 5%;
+  width: 60%;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
+const ExcerptTitle = styled.h3`
+  font-size: 1.5rem;
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+  }
+`;
+const ExcerptText = styled.div`
+  font-size: 1.2rem;
+  @media (max-width: 800px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 0.9rem;
+  }
+`;
+
+const StyledImage = styled.img`
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 80%;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
@@ -47,6 +76,9 @@ const StyledLink = styled((props) => <Link {...props} />)`
   display: flex;
   flex-direction: row;
   color: black;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 export default BlogPostPreview;

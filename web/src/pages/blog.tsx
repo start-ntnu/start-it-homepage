@@ -8,6 +8,7 @@ import {
 import BlogPostPreviewList from "../components/BlogPostPreviewList";
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
+import styled from "styled-components";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -90,7 +91,7 @@ const IndexPage = (props) => {
         image={undefined}
       />
       <div>
-        <h1 hidden>Welcome to {site.title}</h1>
+        <Title hidden>Velkommen til StartIT`s blogg</Title>
         {/*add styling*/}
         {postNodes && (
           <BlogPostPreviewList
@@ -103,5 +104,20 @@ const IndexPage = (props) => {
     </Layout>
   );
 };
+
+const Title = styled.h1`
+  font-weight: bold;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 1268px) {
+    font-size: 36px;
+  }
+  @media (max-width: 800px) {
+    font-size: 26px;
+  }
+`;
 
 export default IndexPage;
