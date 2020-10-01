@@ -15,7 +15,7 @@ export default function NavbarItem({ name, link }: NavbarItemProps) {
 const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
   color: white;
-  font-size: 3vh;
+  font-size: 2vh;
   line-height: 2;
   margin-left: 5vh;
   @media (max-width: 1000px) {

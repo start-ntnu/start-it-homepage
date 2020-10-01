@@ -108,17 +108,29 @@ const Name = styled.h2`
   @media (max-width: 1268px) {
     font-size: 26px;
   }
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 const Email = styled.h2`
   margin-top: 0;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
     font-size: 18px;
+  }
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
+  @media (max-width: 550px) {
+    font-size: 10px;
   }
 `;
 
@@ -134,6 +146,9 @@ const Title = styled.h1`
   }
   @media (max-width: 800px) {
     font-size: 30px;
+  }
+  @media (max-width: 550px) {
+    font-size: 24px;
   }
 `;
 
@@ -151,11 +166,11 @@ const PersonContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 20%;
+  width: 30%;
   height: 40%;
   @media (max-width: 800px) {
     flex-direction: column;
-    width: 40%;
+    width: 50%;
   }
 `;
 

@@ -20,16 +20,15 @@ export const query = graphql`
 export default function Partners({ data }) {
   return (
     <Layout>
-      <div className="App">
-        <Header />
-        <Title>Samarbeidspartnere</Title>
-        <Article>
-          Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en
-          del av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen
-          av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
-          inspirere dem? Da er det bare å ta kontakt!
-        </Article>
-        <PartnerWrapper>
+      <Header />
+      <Title>Samarbeidspartnere</Title>
+      <Article>
+        Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en del
+        av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen av
+        NTUS`s mest engasjerte og ny tenkende studenter og være med på å
+        inspirere dem? Da er det bare å ta kontakt!
+      </Article>
+      {/*<PartnerWrapper>
           <Title>Hovedpartnere</Title>
           <Partner>
             <ImageWrapper>
@@ -164,7 +163,7 @@ export default function Partners({ data }) {
             </PartnerInfo>
           </Partner>
         </PartnerWrapper>
-      </div>
+        */}
     </Layout>
   );
 }
@@ -190,8 +189,8 @@ const Article = styled.p`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   @media (max-width: 1268px) {
     font-size: 15px;
   }

@@ -25,9 +25,18 @@ export default function Header() {
         </StyledLink>
         <Navbar></Navbar>
       </HeaderStyle>
-      <PictureContainer>
+      {/*<PictureContainer>
         <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
+          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
+        </ImageWrapper>
+        <ImageWrapper>
+          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
+        </ImageWrapper>
+        <ImageWrapper>
+          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
+        </ImageWrapper>
+        <ImageWrapper>
+          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
         </ImageWrapper>
         <ImageWrapper>
           <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
@@ -35,16 +44,7 @@ export default function Header() {
         <ImageWrapper>
           <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
         </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
-        </ImageWrapper>
-      </PictureContainer>
+      </PictureContainer>*/}
     </Wrapper>
   );
 }
@@ -56,13 +56,13 @@ const HeaderStyle = styled.header`
   padding-left: 32px;
   background-color: black;
   margin: 0px;
+  position: relative;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
   color: white;
   font-size: 2vh;
-  line-height: 2;
   margin-left: 2vh;
 `;
 
