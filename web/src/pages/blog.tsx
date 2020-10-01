@@ -91,6 +91,7 @@ const IndexPage = (props) => {
       />
       <div>
         <h1 hidden>Welcome to {site.title}</h1>
+        {/*add styling*/}
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"

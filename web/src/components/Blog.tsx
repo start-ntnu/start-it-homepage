@@ -2,6 +2,7 @@ import { format, distanceInWords, differenceInDays } from "date-fns";
 import React from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
+import PortableText from "./PortableText";
 
 function BlogPost(props) {
   const { _rawBody, title, mainImage, publishedAt } = props;
@@ -26,7 +27,7 @@ function BlogPost(props) {
         <div>
           <div>
             <h1>{title}</h1>
-            {_rawBody}
+            {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
           <aside>
             {publishedAt && (
