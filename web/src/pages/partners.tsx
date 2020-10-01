@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import Layout from "../components/Blog";
+import Layout from "../components/Layout";
 
 export const query = graphql`
   query {
@@ -19,16 +18,16 @@ export const query = graphql`
 
 export default function Partners({ data }) {
   return (
-    <Layout>
-      <Header />
-      <Title>Samarbeidspartnere</Title>
-      <Article>
-        Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en del
-        av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen av
-        NTUS`s mest engasjerte og ny tenkende studenter og være med på å
-        inspirere dem? Da er det bare å ta kontakt!
-      </Article>
-      {/*<PartnerWrapper>
+    <div className="App">
+      <Layout>
+        <Title>Samarbeidspartnere</Title>
+        <Article>
+          Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en
+          del av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen
+          av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
+          inspirere dem? Da er det bare å ta kontakt!
+        </Article>
+        {/*<PartnerWrapper>
           <Title>Hovedpartnere</Title>
           <Partner>
             <ImageWrapper>
@@ -162,9 +161,9 @@ export default function Partners({ data }) {
               </Article>
             </PartnerInfo>
           </Partner>
-        </PartnerWrapper>
-        */}
-    </Layout>
+        </PartnerWrapper>*/}
+      </Layout>
+    </div>
   );
 }
 

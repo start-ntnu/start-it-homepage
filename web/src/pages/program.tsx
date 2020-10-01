@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import Layout from "../components/Blog";
+import Layout from "../components/Layout";
 
 export default function App({ data }) {
   return (
