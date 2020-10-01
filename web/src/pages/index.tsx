@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { GlobalStyle } from "../globalStyles";
 import StartITVideo from "../assets/startit.mp4";
+import Header from "../components/Header";
 export const query = graphql`
   query {
     StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
@@ -27,49 +28,45 @@ export const query = graphql`
 
 export default function App({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
-        <VideoWrapper>
-          <video height="100%" width="100%" loop muted autoPlay>
-            <source src={StartITVideo} type="video/mp4" />
-          </video>
-        </VideoWrapper>
+    <Layout>
+      <VideoWrapper>
+        <video height="100%" width="100%" loop muted autoPlay>
+          <source src={StartITVideo} type="video/mp4" />
+        </video>
+      </VideoWrapper>
 
-        <ImageWrapper>
-          <Title>StartIT 2020</Title>
-          <Article>
-            {" "}
-            På NTNU utdannes det for øyeblikket mange tusen studenter som snart
-            skal ut i jobb og må finne ut hva de vil jobbe med. <br></br>
-            <br></br>
-            StartIT har som formål å motivere og inspirere studentene ved NTNU
-            til å ville jobbe med å løse problemer ved hjelp av innovasjon og
-            teknologien som de lærer her på NTNU. <br></br>
-            <br></br>Vi ønsker å skifte fokuset fra “hvor kan man tjene mest
-            penger” til “hvordan kan man være med å løse de mest spennende
-            problemene vi står ovenfor i dag”.
-            <br></br> <br></br>Dette forsøker vi å gjøre ved å vise mulighetene
-            som finnes til å jobbe med innovasjon innenfor teknologi. Det kan
-            være alt fra å vise frem de mest innovative inhouse bedriftene, de
-            mest kreative konsulentselskapene, de kuleste startupsene, eller
-            hvordan man kan starte noe eget.
-          </Article>
-          <StartNTNUlogo>
-            <Img
-              fluid={data.StartNTNU.childImageSharp.fluid}
-              alt="StartNTNU logo"
-            />
-          </StartNTNUlogo>
-        </ImageWrapper>
-      </Fragment>
-    </div>
+      <ImageWrapper>
+        <Title>StartIT 2020</Title>
+        <Article>
+          {" "}
+          På NTNU utdannes det for øyeblikket mange tusen studenter som snart
+          skal ut i jobb og må finne ut hva de vil jobbe med. <br></br>
+          <br></br>
+          StartIT har som formål å motivere og inspirere studentene ved NTNU til
+          å ville jobbe med å løse problemer ved hjelp av innovasjon og
+          teknologien som de lærer her på NTNU. <br></br>
+          <br></br>Vi ønsker å skifte fokuset fra “hvor kan man tjene mest
+          penger” til “hvordan kan man være med å løse de mest spennende
+          problemene vi står ovenfor i dag”.
+          <br></br> <br></br>Dette forsøker vi å gjøre ved å vise mulighetene
+          som finnes til å jobbe med innovasjon innenfor teknologi. Det kan være
+          alt fra å vise frem de mest innovative inhouse bedriftene, de mest
+          kreative konsulentselskapene, de kuleste startupsene, eller hvordan
+          man kan starte noe eget.
+        </Article>
+        <StartNTNUlogo>
+          <Img
+            fluid={data.StartNTNU.childImageSharp.fluid}
+            alt="StartNTNU logo"
+          />
+        </StartNTNUlogo>
+      </ImageWrapper>
+    </Layout>
   );
 }
 
 const Article = styled.p`
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +74,7 @@ const Article = styled.p`
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 1268px) {
-    font-size: 24px;
+    font-size: 16px;
   }
   @media (max-width: 800px) {
     font-size: 16px;
@@ -90,8 +87,8 @@ const ImageWrapper = styled.div`
   margin-top: 6%;
   margin-left: auto;
   margin-right: auto;
-  height: 70%;
-  width: 70%;
+  height: 60%;
+  width: 60%;
 `;
 
 const VideoWrapper = styled.div`
@@ -131,13 +128,13 @@ const StartITlogo = styled.div`
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-top: 7%;
   @media (max-width: 1268px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;

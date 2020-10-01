@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
  * {
     font-family:'Arial';
+    
    
  }
  body {
@@ -12,5 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     margin: 0px;
+    overflow-x: hidden;
  }
 `;

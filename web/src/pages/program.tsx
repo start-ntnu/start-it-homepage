@@ -1,15 +1,12 @@
 import React, { Fragment } from "react";
-import Header from "../components/Header";
 import styled from "styled-components";
-import { GlobalStyle } from "../globalStyles";
+import Layout from "../components/Blog";
 
 export default function App({ data }) {
   return (
-    <div className="App">
-      <Fragment>
-        <GlobalStyle></GlobalStyle>
-        <Header />
-        <Title>Start IT 2021 </Title>
+    <Layout>
+      <div className="App">
+        <Title>Årets StartIT blir på Clarion, Brattøra 04.03.2021 </Title>
         <Program>
           <Mingling>
             <ProgramTitle>Mingling</ProgramTitle>
@@ -36,14 +33,14 @@ export default function App({ data }) {
             </Article>
           </Bankett>
         </Program>
-      </Fragment>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 64px;
+  font-size: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
