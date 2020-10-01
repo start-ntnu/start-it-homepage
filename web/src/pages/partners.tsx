@@ -27,6 +27,12 @@ export default function Partners({ data }) {
           av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
           inspirere dem? Da er det bare å ta kontakt!
         </Article>
+        <ProspektLink
+          href={require("../components/ProspektStartIT2021.pdf")}
+          target="_blank"
+        >
+          Sjekk ut prospektet
+        </ProspektLink>
         {/*<PartnerWrapper>
           <Title>Hovedpartnere</Title>
           <Partner>
@@ -179,6 +185,17 @@ const Title = styled.h1`
   }
   @media (max-width: 800px) {
     font-size: 26px;
+  }
+`;
+
+const ProspektLink = styled.a`
+  display: block;
+  justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+  &:hover {
+    color: grey;
   }
 `;
 

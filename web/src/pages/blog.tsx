@@ -95,7 +95,7 @@ const IndexPage = (props) => {
         {/*add styling*/}
         {postNodes && (
           <BlogPostPreviewList
-            title="Latest blog posts"
+            title="Blogginnlegg"
             nodes={postNodes}
             browseMoreHref="/archive/"
           />

@@ -15,11 +15,6 @@ function BlogPostPreviewGrid(props) {
             </li>
           ))}
       </ListEl>
-      {props.browseMoreHref && (
-        <div>
-          <Link to={props.browseMoreHref}>Browse more</Link>
-        </div>
-      )}
     </div>
   );
 }
