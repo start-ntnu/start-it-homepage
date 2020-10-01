@@ -32,11 +32,11 @@ function BlogPost(props) {
           </div>
           <aside>
             {publishedAt && (
-              <div>
+              <DateDiv>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
                   ? distanceInWords(new Date(publishedAt), new Date())
                   : format(new Date(publishedAt), "MMMM Do, YYYY")}
-              </div>
+              </DateDiv>
             )}
           </aside>
         </div>
@@ -44,6 +44,23 @@ function BlogPost(props) {
     </article>
   );
 }
+
+const DateDiv = styled.div`
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  @media (max-width: 1268px) {
+    font-size: 16px;
+  }
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 9px;
+  }
+`;
 
 const Title = styled.h1`
   font-weight: bold;
