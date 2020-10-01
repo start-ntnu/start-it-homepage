@@ -30,9 +30,9 @@ export default function App({ data }) {
   return (
     <Layout>
       <VideoWrapper>
-        <video height="100%" width="100%" loop muted autoPlay>
+        <VideoStyle height="100%" width="100%" loop muted autoPlay>
           <source src={StartITVideo} type="video/mp4" />
-        </video>
+        </VideoStyle>
       </VideoWrapper>
 
       <ImageWrapper>
@@ -78,6 +78,13 @@ const Article = styled.p`
   }
   @media (max-width: 800px) {
     font-size: 16px;
+  }
+`;
+
+const VideoStyle = styled.video`
+  margin-bottom: -0.5%;
+  @media (max-width: 800px) {
+    margin-bottom: -1%;
   }
 `;
 

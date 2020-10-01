@@ -21,7 +21,7 @@ export default function Header() {
     <Wrapper>
       <HeaderStyle>
         <StyledLink to="/">
-          <h1>StartIT</h1>
+          <Title>StartIT</Title>
         </StyledLink>
         <Navbar></Navbar>
       </HeaderStyle>
@@ -53,10 +53,20 @@ const HeaderStyle = styled.header`
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  padding-left: 32px;
   background-color: black;
   margin: 0px;
   position: relative;
+`;
+
+const Title = styled.h1`
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  color: white;
+  padding-left: 5%;
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`
