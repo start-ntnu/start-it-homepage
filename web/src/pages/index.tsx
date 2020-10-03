@@ -36,7 +36,7 @@ export default function App({ data }) {
       </VideoWrapper>
 
       <ImageWrapper>
-        <Title>StartIT 2020</Title>
+        <Title>StartIT 2021</Title>
         <Article>
           {" "}
           På NTNU utdannes det for øyeblikket mange tusen studenter som snart

@@ -6,7 +6,11 @@ export default function App({ data }) {
   return (
     <Layout>
       <div className="App">
-        <Title>Årets StartIT blir på Clarion, Brattøra 04.03.2021 </Title>
+        <Title>
+          Årets StartIT er under planlegging
+          <br></br>
+          Tentativt program{" "}
+        </Title>
         <Program>
           <Mingling>
             <ProgramTitle>Mingling</ProgramTitle>
@@ -28,8 +32,11 @@ export default function App({ data }) {
             <ProgramTitle>Bankett</ProgramTitle>
             <ProgramTitle>19:30-21:45</ProgramTitle>
             <Article>
-              15 min per HSP2x30 min per speaker20min til servering av mat Alle
-              er ute av lokalet kl. 22
+              HSP med foredrag om sine bedrifter og hva de gjør for innovasjon.
+              <br></br>
+              Matservering
+              <br></br>
+              Speakers snakker om hvorfor innovasjon i IT er viktig
             </Article>
           </Bankett>
         </Program>

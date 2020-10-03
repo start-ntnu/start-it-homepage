@@ -58,21 +58,21 @@ export default function Team({ data }) {
             <ImageWrapper>
               <Img fluid={data.Isabel.childImageSharp.fluid} alt="Isabel" />
             </ImageWrapper>
-            <Name>Isabel</Name>
+            <Name>Isabel Slorer</Name>
             <Email>isabel.slorer@startntnu.no </Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Andreas.childImageSharp.fluid} alt="Andreas" />
             </ImageWrapper>
-            <Name>Andreas</Name>
+            <Name>Andreas Rikheim</Name>
             <Email>andreas.rikheim@startntnu.no </Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Mille.childImageSharp.fluid} alt="Mille" />
             </ImageWrapper>
-            <Name>Mille</Name>
+            <Name>Mille Richardsen</Name>
             <Email>mille.richardsen@startntnu.no </Email>
           </PersonContainer>
         </PictureContainer>
@@ -81,14 +81,14 @@ export default function Team({ data }) {
             <ImageWrapper>
               <Img fluid={data.Snorre.childImageSharp.fluid} alt="Snorre" />
             </ImageWrapper>
-            <Name>Snorre</Name>
+            <Name>Snorre Barku</Name>
             <Email>snorre.barku@startntnu.no</Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Casper.childImageSharp.fluid} alt="Casper" />
             </ImageWrapper>
-            <Name>Casper</Name>
+            <Name>Casper Feng</Name>
             <Email>casper.feng@startntnu.no</Email>
           </PersonContainer>
         </PictureContainer>
@@ -99,38 +99,38 @@ export default function Team({ data }) {
 
 const Name = styled.h2`
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-bottom: 0;
   @media (max-width: 1268px) {
-    font-size: 26px;
+    font-size: 18px;
   }
   @media (max-width: 800px) {
-    font-size: 20px;
+    font-size: 12px;
   }
   @media (max-width: 550px) {
-    font-size: 16px;
+    font-size: 10px;
   }
 `;
 const Email = styled.h2`
   margin-top: 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 18px;
+    font-size: 15px;
   }
   @media (max-width: 800px) {
-    font-size: 14px;
+    font-size: 12px;
   }
   @media (max-width: 550px) {
-    font-size: 10px;
+    font-size: 8px;
   }
 `;
 
