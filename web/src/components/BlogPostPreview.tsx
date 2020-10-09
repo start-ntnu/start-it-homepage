@@ -8,7 +8,7 @@ import PortableText from "./PortableText";
 
 function BlogPostPreview(props) {
   return (
-    <StyledLink to={getBlogUrl(props.publishedAt, props.slug.current)}>
+    <StyledLink to={getBlogUrl(props.slug.current)}>
       <div>
         {props.mainImage && props.mainImage.asset && (
           <StyledImage

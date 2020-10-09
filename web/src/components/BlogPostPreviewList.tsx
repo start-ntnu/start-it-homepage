@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import BlogPostPreview from "./BlogPostPreview";
 import styled from "styled-components";
