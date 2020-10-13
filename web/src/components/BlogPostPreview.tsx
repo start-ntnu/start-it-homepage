@@ -30,7 +30,7 @@ function BlogPostPreview(props) {
             <PortableText blocks={props._rawExcerpt} />
           </ExcerptText>
         )}
-        <ExcerptText>{format(props.publishedAt, "MMMM Do, YYYY")}</ExcerptText>
+        <ExcerptText>Publisert {format(props.publishedAt, "MMMM Do, YYYY")}</ExcerptText>
       </BlogInfo>
     </StyledLink>
   );

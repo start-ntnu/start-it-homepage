@@ -13,28 +13,26 @@ export default function App({ data }) {
         </Title>
         <Program>
           <Mingling>
-            <ProgramTitle>Mingling</ProgramTitle>
-            <ProgramTitle>17:00-17:30</ProgramTitle>
+            <ProgramTitle>Nettside og stand</ProgramTitle>
+            <ProgramTitle>Hele uka</ProgramTitle>
             <Article>
-              Studentene får møtt bedrifter og start-ups på stands i
-              mingleområdet.
+              Samarbeidspartnere vil få legge ut videoer på nettsiden,
+               ulike konkurranser og mulighet til å hente premier på stand.
             </Article>
           </Mingling>
           <InteraktivtOpplegg>
             <ProgramTitle>Interaktivt opplegg</ProgramTitle>
-            <ProgramTitle>17:30-19:30</ProgramTitle>
+            <ProgramTitle>Torsdag dagtid</ProgramTitle>
             <Article>
-              Løype gjennom ulike stasjoner <br></br>
-              Hver gruppe har 3x30min workshops og 1x30 min mingling
+              Samarbeidspartenere vil ha sine interaktive opplegg 
+              rundt omkring på campus
             </Article>
           </InteraktivtOpplegg>
           <Bankett>
             <ProgramTitle>Bankett</ProgramTitle>
-            <ProgramTitle>19:30-21:45</ProgramTitle>
+            <ProgramTitle>Torsdag kveldstid</ProgramTitle>
             <Article>
               HSP med foredrag om sine bedrifter og hva de gjør for innovasjon.
-              <br></br>
-              Matservering
               <br></br>
               Speakers snakker om hvorfor innovasjon i IT er viktig
             </Article>
