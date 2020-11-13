@@ -13,7 +13,21 @@ export const query = graphql`
         }
       }
     }
+    Visma: file(relativePath: { eq: "partners/Visma.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  Iterate: file(relativePath: { eq: "partners/Iterate.png" }) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
   }
+}
 `;
 
 export default function Partners({ data }) {
@@ -33,34 +47,31 @@ export default function Partners({ data }) {
         >
           Sjekk ut prospektet
         </ProspektLink>
-        {/*<PartnerWrapper>
+        {/* <PartnerWrapper>
           <Title>Hovedpartnere</Title>
           <Partner>
             <ImageWrapper>
               <Img
-                fluid={data.Facebook.childImageSharp.fluid}
-                alt="Facebook logo"
+                fluid={data.Visma.childImageSharp.fluid}
+                alt="Visma logo"
               />
             </ImageWrapper>
             <PartnerInfo>
-              <PartnerName>Facebook</PartnerName>
+              <PartnerName>Visma</PartnerName>
               <Article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                fringilla diam ac fringilla ornare. Maecenas in arcu
-                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
-                hendrerit lorem, ac condimentum elit rutrum et. Quisque
-                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
-                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
-                eget urna sagittis sodales. Duis suscipit hendrerit lorem, ac
-                condimentum elit rutrum et. Quisque ultrices, dolor vitae
-                suscipit scelerisque, nibh leo dignissim felis, non sollicitudin
-                leo sem et nisi. Nullam mauris nulla, semper et neque at, dictum
-                venenatis nisi. Fusce vestibulum elit eget urna sagittis
-                sodales.
+                Visma er ett av Nordens raskest voksende selskaper og har hatt en sterk utvikling siden
+                oppstarten i 1996. Allerede i 1999 ble selskapet etablert i utlandet, med Visma Software
+                i Danmark og UK.
+
+                I 2000 endret Visma strategien til å inkludere både programvare og tjenester innenfor
+                regnskap, finans og lønn.
+
+                I 2002 entret Visma markedet for offentlig sektor og i 2013 signerte Visma sin største avtale
+                noensinne. Visma skal lage nettbasert løsning for skoleadministrasjon.
               </Article>
             </PartnerInfo>
           </Partner>
+         
           <Partner>
             <ImageWrapper>
               <Img
@@ -91,29 +102,24 @@ export default function Partners({ data }) {
           <Partner>
             <ImageWrapper>
               <Img
-                fluid={data.Facebook.childImageSharp.fluid}
-                alt="Facebook logo"
+                fluid={data.Iterate.childImageSharp.fluid}
+                alt="Iterate logo"
               />
             </ImageWrapper>
             <PartnerInfo>
-              <PartnerName>Facebook</PartnerName>
+              <PartnerName>Iterate</PartnerName>
               <Article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                fringilla diam ac fringilla ornare. Maecenas in arcu
-                consectetur, laoreet nunc quis, lacinia nisi. Duis suscipit
-                hendrerit lorem, ac condimentum elit rutrum et. Quisque
-                ultrices, dolor vitae suscipit scelerisque, nibh leo dignissim
-                felis, non sollicitudin leo sem et nisi. Nullam mauris nulla,
-                semper et neque at, dictum venenatis nisi. Fusce vestibulum elit
-                eget urna sagittis sodales. et eros. Duis suscipit hendrerit
-                lorem, ac condimentum elit rutrum et. Quisque ultrices, dolor
-                vitae suscipit scelerisque, nibh leo dignissim felis, non
-                sollicitudin leo sem et nisi. Nullam mauris nulla, semper et
-                neque at, dictum venenatis nisi. Fusce vestibulum elit eget urna
-                sagittis sodales.
+               Iterate sin visjon er "Enable Innovators". Vi vet at entreprenørskap er krevende arbeid,
+               derfor slår vi sammen gründer og ansatt. Vi vil at våre mennesker skal bruke mesteparten 
+               av energien sin på det de er unikt gode på. Hos oss veksler ansatte mellom å jobbe i oppdrag,
+               hvor de hjelper startups og etablerte selskaper med utvikling og innovasjon, og å jobbe med 
+               egne ideer. Denne vekselvirkningen er en katalysator for kreativ galskap. Man ser hvordan 
+               verden fungerer, man får hele tiden nye ideer og man blir godt kjent med de andre byggerne 
+               rundt seg.
               </Article>
             </PartnerInfo>
           </Partner>
+           
           <Partner>
             <ImageWrapper>
               <Img
@@ -228,12 +234,12 @@ const Partner = styled.div`
 
 const ImageWrapper = styled.div`
   margin: auto;
-  height: 70%;
-  width: 70%;
+  height: 90%;
+  width: 90%;
   @media (max-width: 1268px) {
     margin: auto;
-    height: 20%;
-    width: 20%;
+    height: 30%;
+    width: 30%;
   }
 `;
 const PartnerInfo = styled.div`
@@ -248,6 +254,7 @@ const PartnerName = styled.h2`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-top:1%;
   @media (max-width: 1268px) {
     font-size: 36px;
   }
