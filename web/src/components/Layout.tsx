@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer"
 import { GlobalStyle } from "../globalStyles";
 
 type Props = {
@@ -12,6 +13,7 @@ export const Layout = ({ children }: Props) => {
       <GlobalStyle></GlobalStyle>
       <Header />
       <main>{children}</main>
+      <Footer></Footer>
     </>
   );
 };

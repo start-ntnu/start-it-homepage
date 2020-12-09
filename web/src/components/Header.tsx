@@ -53,7 +53,7 @@ const HeaderStyle = styled.header`
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  background-color: black;
+  background-color:#373644;
   margin: 0px;
   position: relative;
 `;
