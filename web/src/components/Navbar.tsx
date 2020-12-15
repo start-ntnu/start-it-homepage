@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { NavLinks } from "../fixtures/Navigation";
+import { NavLinks } from "../fixtures/navLinks";
 import NavbarItem from "./NavbarItem";
 
 const Toggle = styled.div`
@@ -13,6 +13,7 @@ const Toggle = styled.div`
     display: flex;
   }
 `;
+
 const Hamburger = styled.div`
   background-color: white;
   width: 30px;
@@ -33,14 +34,14 @@ const Hamburger = styled.div`
   }
 
   ::before {
-    transform: ${(props) =>
+    transform: ${(props: any) =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
-    opacity: ${(props) => (props.open ? "0" : "1")};
-    transform: ${(props) => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    opacity: ${(props: any) => (props.open ? "0" : "1")};
+    transform: ${(props: any) => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
   }
 `;
@@ -83,7 +84,7 @@ const NavbarDiv = styled.nav`
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
-  background-color: #373644;
+  background-color: black;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
@@ -115,7 +116,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     margin-top: 5vh;
-    background-color: #373644;
+    background-color: black;
     transition: all 0.3s ease-in;
     top: 3vh;
     left: ${(props) => (props.open ? "-100%" : "0")};

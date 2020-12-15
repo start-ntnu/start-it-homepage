@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer"
+import 'react-vertical-timeline-component/style.min.css';
 import { GlobalStyle } from "../globalStyles";
+import Footer from "./Footer";
+import Header from "./Header";
 
 type Props = {
   children: React.ReactNode;
@@ -10,10 +11,10 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   return (
     <>
-      <GlobalStyle></GlobalStyle>
+      <GlobalStyle />
       <Header />
       <main>{children}</main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

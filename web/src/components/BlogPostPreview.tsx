@@ -1,9 +1,9 @@
 import { format } from "date-fns";
 import { Link } from "gatsby";
 import React from "react";
-import { buildImageObj, cn, getBlogUrl } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
 import styled from "styled-components";
+import { buildImageObj, getBlogUrl } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
 import PortableText from "./PortableText";
 
 function BlogPostPreview(props) {
@@ -68,7 +68,7 @@ const ExcerptText = styled.div`
 const StyledImage = styled.img`
   margin-left: 3%;
   margin-right: 3%;
-  width: 80%;
+  width: 100%;
 `;
 
 const StyledLink = styled((props) => <Link {...props} />)`

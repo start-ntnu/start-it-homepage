@@ -1,11 +1,19 @@
-import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
+import React from "react";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import { imageUrlFor } from "../lib/image-url";
 import { buildImageObj } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
+interface SEOProps {
+  description?: string;
+  lang?: string;
+  meta?: any;
+  keywords?: string[];
+  title?: string;
+  image?: any;
+}
+function SEO({ description, lang, meta = [], keywords, title = "StartIT 2021", image }: SEOProps) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -71,7 +79,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                     }
                   : []
               )
-              .concat(meta)}
+              .concat(meta!)}
           />
         );
       }}

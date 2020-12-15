@@ -1,6 +1,6 @@
 import * as React from "react";
-import { NavLinks } from "../fixtures/Navigation";
 import styled from "styled-components";
+import { NavLinks } from "../fixtures/navLinks";
 import NavbarItemFooter from "./NavbarItemFooter";
 
 export default function Footer(){
@@ -11,17 +11,17 @@ export default function Footer(){
         <FooterStyle>
             <Wrapper>
                 <Contact>
-                    <h3>Email</h3>
+                    <StyledH3>Email</StyledH3>
                     <StyledText>isabel.slorer@startntnu.no</StyledText>
-                    <h3>Telefon</h3>
+                    <StyledH3>Telefon</StyledH3>
                     <StyledText>45023651</StyledText>
                 </Contact>
-                <NavbarDiv><h3>Sider</h3>{navLinks}</NavbarDiv>
+                <NavbarDiv><StyledH3>Sider</StyledH3>{navLinks}</NavbarDiv>
                 <Annet>
-                    <h3>Annet</h3>
-                    <StyledLinks href='https://www.facebook.com/startntnu'>Facebook</StyledLinks>
-                    <StyledLinks href='https://www.instagram.com/startntnu'>Instagram</StyledLinks>
-                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/'>Linkdin</StyledLinks>
+                    <StyledH3>Annet</StyledH3>
+                    <StyledLinks href='https://www.facebook.com/startntnu' target="_blank">Facebook</StyledLinks>
+                    <StyledLinks href='https://www.instagram.com/startntnu' target="_blank">Instagram</StyledLinks>
+                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/' target="_blank">LinkedIn</StyledLinks>
                 </Annet>
             </Wrapper>
         </FooterStyle>
@@ -36,9 +36,10 @@ const FooterStyle = styled.footer`
     flex-direction: row;
     position: relative;
     padding-bottom: 30px;
+    flex-wrap: wrap;
     color:white;
     font-weight: 500;
-    background: #474652;
+    background: black;
     padding-top: 32px;
     margin-top:10px;
     @media (max-width: 700) {
@@ -46,14 +47,22 @@ const FooterStyle = styled.footer`
   }
 `;
 
+const StyledH3 = styled.h3`
+  color: #BD6631;
+  text-transform: uppercase;
+`;
+
 const Wrapper = styled.div`
     margin-top:auto;
     margin-bottom:auto;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    width: 100%;
+    max-width: 900px;
+    justify-content:space-between;
     @media (max-width: 700px) {
         flex-direction:column;
+        margin-left: 0;
   }
 `;
 
@@ -69,30 +78,28 @@ const StyledLinks = styled.a`
 
 const Contact = styled.div`
     flex-direction:column;
-    margin-right:30%;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
+      text-align: center;
   }
 `;
 
 const NavbarDiv = styled.nav`
     display:flex;
     flex-direction: column;
-    margin-right:30%;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
-        
+      text-align: center;
   }
 `;
 
 const Annet = styled.div`
     display:flex;
     flex-direction: column;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
-        
+      text-align: center;
+
   }
-    
+
 `;
