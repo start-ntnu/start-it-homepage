@@ -59,21 +59,16 @@ export default function Navbar() {
   ));
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  const windowGlobal = typeof window !== 'undefined' && window;
+
   if (navbarOpen){
-    if (typeof window !== undefined){
-    if (document){
-      if (document.body){
-        document.body.style.position = 'fixed';
+    if (windowGlobal){
+        windowGlobal.document.body.style.position = 'fixed';
       }
-    }
   }
-  } else {
-    if (typeof window !== undefined){
-      if (document){
-        if (document.body){
-          document.body.style.position = 'relative';
-        }
-      }
+  else {
+    if (windowGlobal){
+        windowGlobal.document.body.style.position = 'relative';
     }
   }
 
@@ -98,18 +93,19 @@ export default function Navbar() {
   );
 }
 
-const NavbarDiv = styled.nav`
+
+const NavbarDivMobile = styled.nav`
   display: flex;
+  position: fixed;
+  height: 100%;
   flex-direction: row;
   @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
 
-const NavbarDivMobile = styled.nav`
+const NavbarDiv = styled.nav`
   display: flex;
-  position: fixed;
-  height: 100%;
   flex-direction: row;
   @media (max-width: 1000px) {
     flex-direction: column;
