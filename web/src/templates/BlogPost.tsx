@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Blog from "../components/Blog";
 import Layout from "../components/Layout";
 import { toPlainText } from "../lib/helpers";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {

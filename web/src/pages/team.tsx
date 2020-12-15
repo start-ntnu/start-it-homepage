@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
-import Layout from "../components/Layout";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import React from "react";
+import styled from "styled-components";
+import Layout from "../components/Layout";
 
 export const membersQuery = graphql`
   query {
@@ -52,27 +52,27 @@ export default function Team({ data }) {
   return (
     <Layout>
       <div className="App">
-        <Title>The team</Title>
+        <Title><div><span style={{color: '#BD6631'}}>Teamet</span> 2021</div></Title>
         <PictureContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Isabel.childImageSharp.fluid} alt="Isabel" />
             </ImageWrapper>
-            <Name>Isabel Slorer</Name>
+            <Name><div><span style={{color: '#BD6631'}}>Isabel</span>  Slorer</div></Name>
             <Email>isabel.slorer@startntnu.no </Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Andreas.childImageSharp.fluid} alt="Andreas" />
             </ImageWrapper>
-            <Name>Andreas Rikheim</Name>
+            <Name><div><span style={{color: '#BD6631'}}>Andreas</span> Rikheim</div></Name>
             <Email>andreas.rikheim@startntnu.no </Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Mille.childImageSharp.fluid} alt="Mille" />
             </ImageWrapper>
-            <Name>Mille Richardsen</Name>
+            <Name><div><span style={{color: '#BD6631'}}>Mille</span>  Richardsen</div></Name>
             <Email>mille.richardsen@startntnu.no </Email>
           </PersonContainer>
         </PictureContainer>
@@ -81,14 +81,14 @@ export default function Team({ data }) {
             <ImageWrapper>
               <Img fluid={data.Snorre.childImageSharp.fluid} alt="Snorre" />
             </ImageWrapper>
-            <Name>Snorre Barku</Name>
+            <Name><div><span style={{color: '#BD6631'}}>Snorre</span> Barku</div></Name>
             <Email>snorre.barku@startntnu.no</Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Casper.childImageSharp.fluid} alt="Casper" />
             </ImageWrapper>
-            <Name>Casper Feng</Name>
+            <Name><div><span style={{color: '#BD6631'}}>Casper</span>  Feng</div></Name>
             <Email>casper.feng@startntnu.no</Email>
           </PersonContainer>
         </PictureContainer>
@@ -155,7 +155,7 @@ const Title = styled.h1`
 const PictureContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
   margin: auto;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -175,7 +175,9 @@ const PersonContainer = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  margin: auto;
-  height: 100%;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  height: 60%;
+  width: 60%;
 `;

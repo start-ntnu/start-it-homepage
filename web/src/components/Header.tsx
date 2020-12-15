@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import * as React from "react";
 import styled from 'styled-components';
 import Navbar from "./Navbar";
-import SEO from './SEO';
+import SEO from './Seo';
 
 export default function Header() {
   const data = useStaticQuery(graphql`

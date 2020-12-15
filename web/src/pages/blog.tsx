@@ -6,7 +6,7 @@ import {
   filterOutDocsPublishedInTheFuture,
 } from "../lib/helpers";
 import BlogPostPreviewList from "../components/BlogPostPreviewList";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 
