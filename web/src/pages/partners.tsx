@@ -42,7 +42,30 @@ export default function Partners({ data }) {
           <StyledLi>Komme i god kontakt med noen av <span style={{color: '#BD6631'}}>landets dyktigste studenter.</span></StyledLi>
           <StyledLi>Være med på å <span style={{color: '#BD6631'}}>inspirere og motivere </span>studenter til å ville jobbe med innovasjon og IT.</StyledLi>
         </StyledList>
-        <SubTitle>INTERESSERT?</SubTitle>
+        <SubTitle><span style={{color: '#BD6631'}}>HVORDAN?</span></SubTitle>
+        <SubTitleP>
+          “Hva er den beste måten å sette studenter i kontakt
+med innovasjon-mulighetene?” har vi tenkt på.
+Vår hypotese er at interaksjon med bedrifter og
+mennesker som allerede arbeider med innovasjon
+innenfor teknologi vil bidra til å inspirere.
+</SubTitleP>
+        <SubSubTitle><span style={{color: '#BD6631'}}>Hva</span></SubSubTitle>
+        <SubTitleP>Planen vår for StartIT 2021 er derfor å ta studentene gjennom
+en løype med interaktive stasjoner der de får bedre innblikk i
+mulighetene til å innovere innenfor teknologi. Etterfulgt at dette vil
+det holdes en bankett med inspirerende foredrag. På de stasjonene vil
+du som samarbeidspartner ha all frihet til å lage et interaktivt opplegg som
+for eksempel kan vise fram noe av det kuleste dere jobber med akkurat nå.
+Målet er at studentene skal forlate stasjonen deres mer opplyste og inspirerte.</SubTitleP>
+        <SubSubTitle><span style={{color: '#BD6631'}}>Hvem</span></SubSubTitle>
+        <SubTitleP>
+        Fra KPIen til tidligere StartIT arrangementer ser vi at det pleier å være et variert utvalg
+studenter fra ulike studieprogram og årstrinn som deltar. Vi vil gjerne høre høre hvilke
+studieretninger dere er mest interessert i å treffe, og vil forsøke å koble dere opp mot de
+under StartIT, slik at dere når ut til målgruppen dere ønsker.
+        </SubTitleP>
+        <SubTitleLast><span style={{color: '#BD6631'}}>INTERESSERT?</span></SubTitleLast>
         <SubTitle><span style={{color: '#BD6631'}}>Kontakt oss</span> på isabel.slorer@startntnu.no</SubTitle>
         <ProspektLink
           href={"/ProspektStartIT2021.pdf"}
@@ -203,6 +226,26 @@ const SubTitle = styled.h2`
   text-align: center;
 `;
 
+const SubTitleLast = styled.h2`
+  margin: 50px auto;
+  justify-content: center;
+  text-align: center;
+`;
+
+
+const SubSubTitle = styled.h3`
+margin: 15px auto;
+  justify-content: center;
+  text-align: center;
+`;
+
+const SubTitleP = styled.p`
+  margin: 15px auto;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+`;
+
 const ProspektLink = styled.a`
   display: block;
   justify-content: center;
@@ -219,7 +262,6 @@ const StyledList = styled.ul`
   text-align: center;
   list-style: none;
   line-height: 2;
-  height: 350px;
 `;
 
 const StyledLi = styled.li`

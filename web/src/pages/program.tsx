@@ -21,7 +21,7 @@ export default function App({ data }) {
     className="vertical-timeline-element--work"
     contentStyle={{ background: '#BD6631', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #BD6631' }}
-    date="Kommer snart"
+    date="18. mars"
     iconStyle={{ background: '#BD6631', color: '#fff' }}
     icon={""}
   >Interaktivt opplegg med samarbeidspartnerne.</VerticalTimelineElement>
@@ -30,7 +30,7 @@ export default function App({ data }) {
     contentStyle={{ background: 'black', color: '#BD6631', borderWidth: '0.5px', borderStyle: "solid", borderColor: 'white' }}
     contentArrowStyle={{ borderRight: '7px solid black' }}
     iconStyle={{ background: 'black', color: '#fff' }}
-    date="Kommer snart"
+    date="18. mars"
     icon={""}
   >Avslutning med bankett på kvelden.</VerticalTimelineElement>
 </VerticalTimeline>
