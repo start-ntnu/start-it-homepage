@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
@@ -12,22 +11,14 @@ export const query = graphql`
         }
       }
     }
-
-    StartIT: file(relativePath: { eq: "logo.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
   }
 `;
 
 export default function App({ data }) {
   return (
     <Layout>
-      <ImageWrapper>
-        <Title>StartIT 2021</Title>
+      <Container>
+        <Title><span style={{color: '#BD6631'}}>START</span>IT 2021</Title>
         <Article>
           {" "}
           På NTNU utdannes det for øyeblikket mange tusen studenter som snart
@@ -45,13 +36,7 @@ export default function App({ data }) {
           kreative konsulentselskapene, de kuleste startupsene, eller hvordan
           man kan starte noe eget.
         </Article>
-        <StartNTNUlogo>
-          <Img
-            fluid={data.StartNTNU.childImageSharp.fluid}
-            alt="StartNTNU logo"
-          />
-        </StartNTNUlogo>
-      </ImageWrapper>
+        </Container>
     </Layout>
   );
 }
@@ -72,56 +57,20 @@ const Article = styled.p`
   }
 `;
 
-
-const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 6%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 60%;
-  width: 60%;
-`;
-
-const BorderDiv = styled.div`
-  margin-top: -0.4%;
-  height: 13px;
-  background-color: grey;
-  opacity: 50%;
-`;
-
-const StartNTNUlogo = styled.div`
-  margin-top: 5%;
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
-`;
-
-const StartITlogo = styled.div`
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-  margin-right: auto;
-  margin-left: auto;
-  width: 40%;
-  height: 20%;
-  animation: rotation 4s infinite linear;
-`;
-
 const Title = styled.h1`
   font-weight: bold;
   font-size: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   margin-top: 7%;
   @media (max-width: 1268px) {
     font-size: 30px;
   }
 `;
+
+const Container = styled.div`
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+`

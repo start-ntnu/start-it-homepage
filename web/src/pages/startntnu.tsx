@@ -1,31 +1,11 @@
-import React, { Fragment } from "react";
-import Layout from "../components/Layout";
-import { graphql } from "gatsby";
+import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
-
-export const query = graphql`
-  query {
-    StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`;
+import Layout from "../components/Layout";
 
 export default function App({ data }) {
   return (
     <Layout>
       <div className="App">
-        <ImageWrapper>
-          <Img
-            fluid={data.StartNTNU.childImageSharp.fluid}
-            alt="StartNTNU logo"
-          />
-        </ImageWrapper>
         <Title>Hvem er vi?</Title>
         <Article>
           Start NTNU er en non-profitt studentorganisasjon som jobber for at
@@ -40,14 +20,6 @@ export default function App({ data }) {
     </Layout>
   );
 }
-
-const ImageWrapper = styled.div`
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50%;
-  width: 50%;
-`;
 
 const Title = styled.h1`
   font-weight: bold;

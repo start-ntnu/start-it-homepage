@@ -11,17 +11,17 @@ export default function Footer(){
         <FooterStyle>
             <Wrapper>
                 <Contact>
-                    <h3>Email</h3>
+                    <StyledH3>Email</StyledH3>
                     <StyledText>isabel.slorer@startntnu.no</StyledText>
-                    <h3>Telefon</h3>
+                    <StyledH3>Telefon</StyledH3>
                     <StyledText>45023651</StyledText>
                 </Contact>
-                <NavbarDiv><h3>Sider</h3>{navLinks}</NavbarDiv>
+                <NavbarDiv><StyledH3>Sider</StyledH3>{navLinks}</NavbarDiv>
                 <Annet>
-                    <h3>Annet</h3>
+                    <StyledH3>Annet</StyledH3>
                     <StyledLinks href='https://www.facebook.com/startntnu'>Facebook</StyledLinks>
                     <StyledLinks href='https://www.instagram.com/startntnu'>Instagram</StyledLinks>
-                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/'>Linkdin</StyledLinks>
+                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/'>LinkedIn</StyledLinks>
                 </Annet>
             </Wrapper>
         </FooterStyle>
@@ -38,12 +38,17 @@ const FooterStyle = styled.footer`
     padding-bottom: 30px;
     color:white;
     font-weight: 500;
-    background: #474652;
+    background: black;
     padding-top: 32px;
     margin-top:10px;
     @media (max-width: 700) {
         flex-direction:column;
   }
+`;
+
+const StyledH3 = styled.h3`
+  color: #BD6631;
+  text-transform: uppercase;
 `;
 
 const Wrapper = styled.div`

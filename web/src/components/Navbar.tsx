@@ -83,7 +83,7 @@ const NavbarDiv = styled.nav`
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
-  background-color: #373644;
+  background-color: black;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
@@ -115,7 +115,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     margin-top: 5vh;
-    background-color: #373644;
+    background-color: black;
     transition: all 0.3s ease-in;
     top: 3vh;
     left: ${(props) => (props.open ? "-100%" : "0")};

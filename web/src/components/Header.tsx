@@ -1,51 +1,37 @@
+import { graphql, Link, useStaticQuery } from "gatsby";
+import Img from 'gatsby-image';
 import * as React from "react";
-import { Link } from "gatsby";
+import styled from 'styled-components';
 import Navbar from "./Navbar";
-import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import SEO from './SEO';
 
 export default function Header() {
   const data = useStaticQuery(graphql`
-    query {
-      Facebook: file(relativePath: { eq: "partners/Facebook.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+  query {
+    logo: file(relativePath: { eq: "logo.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-  `);
+  }
+`);
   return (
+    <>
+    <SEO />
     <Wrapper>
       <HeaderStyle>
         <StyledLink to="/">
-          <Title>StartIT</Title>
+          <FlexWrapper>
+          <StyledImg fluid={data.logo.childImageSharp.fluid} />
+          <Title><span style={{color: '#BD6631'}}>START</span>IT</Title>
+          </FlexWrapper>
         </StyledLink>
-        <Navbar></Navbar>
+        <Navbar />
       </HeaderStyle>
-      {/*<PictureContainer>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="Partner logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
-        </ImageWrapper>
-        <ImageWrapper>
-          <Img fluid={data.Facebook.childImageSharp.fluid} alt="StartIt logo" />
-        </ImageWrapper>
-      </PictureContainer>*/}
     </Wrapper>
+    </>
   );
 }
 
@@ -53,9 +39,18 @@ const HeaderStyle = styled.header`
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  background-color:#373644;
   margin: 0px;
   position: relative;
+`;
+
+const FlexWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const StyledImg = styled(Img)`
+  height: 60px;
+  width: 70px;
 `;
 
 const Title = styled.h1`
@@ -76,23 +71,8 @@ const StyledLink = styled((props) => <Link {...props} />)`
   margin-left: 2vh;
 `;
 
-const PictureContainer = styled.div`
-  margin-top: 2%;
-  display: flex;
-  flex-direction: row;
-`;
-
-const ImageWrapper = styled.div`
-  margin: auto;
-  height: 10%;
-  width: 10%;
-  @media (max-width: 1268px) {
-    height: 5%;
-    width: 5%;
-  }
-`;
-
 const Wrapper = styled.div`
   width: 100%;
   padding: 0px;
+  background-color: black;
 `;

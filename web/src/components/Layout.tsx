@@ -10,11 +10,10 @@ type Props = {
 export const Layout = ({ children }: Props) => {
   return (
     <>
-      <GlobalStyle>
+      <GlobalStyle />
       <Header />
       <main>{children}</main>
-      <Footer></Footer>
-      </GlobalStyle>
+      <Footer />
     </>
   );
 };

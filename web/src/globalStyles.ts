@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  * {
-    font-family:'Playfair Display', serif;
+    font-family:'Arvo', serif;
+    color: white;
 
  }
  body {
@@ -13,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0px;
     overflow-x: hidden;
-    background-color:#FFF8F0;
+    background-color: black;
+ }
+
+ main {
+   min-height: 80vh;
  }
 `;
