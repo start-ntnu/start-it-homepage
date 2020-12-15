@@ -32,7 +32,7 @@ import SEO from "../components/Seo";
 
 export default function Partners({ data }) {
   return (
-    <div className="App">
+    <>
       <SEO title={"Samarbeidspartnere"} />
       <Layout>
         <Title><div><span style={{color: '#BD6631'}}>SAMARBEIDS</span>PARTNERE</div></Title>
@@ -205,7 +205,7 @@ export default function Partners({ data }) {
           </Partner>
         </PartnerWrapper>*/}
       </Layout>
-    </div>
+    </>
   );
 }
 
