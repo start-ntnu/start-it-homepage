@@ -60,9 +60,17 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   if (navbarOpen){
-    document.body.style.position = 'fixed';
+    if (document){
+      if (document.body){
+        document.body.style.position = 'fixed';
+      }
+    }
   } else {
-    document.body.style.position = 'relative';
+    if (document){
+      if (document.body){
+        document.body.style.position = 'relative';
+      }
+    }
   }
 
   return (
