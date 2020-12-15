@@ -1,117 +1,77 @@
-import { graphql, StaticQuery } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import Helmet from "react-helmet";
-import { buildImageObj } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
+import { useLocation } from '@reach/router';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 interface SEOProps {
-  description?: string;
-  lang?: string;
-  meta?: any;
-  keywords?: string[];
   title?: string;
-  image?: any;
+  description?: string;
+  image?: string;
+  article?: boolean;
 }
-function SEO({ description, lang, meta = [], keywords, title = "StartIT 2021", image }: SEOProps) {
+
+const SEO = ({ title, description, image, article }: SEOProps) => {
+  const query = graphql`
+    query SEO {
+      site {
+        siteMetadata {
+          defaultTitle: title
+          titleTemplate
+          defaultDescription: description
+          siteUrl: siteUrl
+          defaultImage: image
+        }
+      }
+    }
+  `;
+
+  const { pathname } = useLocation();
+  const { site } = useStaticQuery(query);
+
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+  } = site.siteMetadata;
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: image || defaultImage,
+    url: `${siteUrl}${pathname}`,
+  };
+
+  const schemaOrgJSONLD = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    author: 'StartIT',
+    url: 'https://www.startit2021.no',
+    name: 'StartIT 2021',
+    logo: `https://www.startit2021.no/preview_img.png`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '45023651',
+      contactType: 'Customer service',
+    },
+  };
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={(data) => {
-        const metaDescription =
-          description || (data.site && data.site.description) || "";
-        const siteTitle = (data.site && data.site.title) || "";
-        const siteAuthor =
-          (data.site && data.site.author && data.site.author.name) || "";
-        const metaImage =
-          image && image.asset
-            ? imageUrlFor(buildImageObj(image)).width(1200).url()
-            : "";
-
-        return (
-          <Helmet
-            htmlAttributes={{ lang }}
-            title={title}
-            titleTemplate={title === siteTitle ? "%s" : `%s | ${siteTitle}`}
-            meta={[
-              {
-                name: "description",
-                content: metaDescription,
-              },
-              {
-                property: "og:title",
-                content: title,
-              },
-              {
-                property: "og:description",
-                content: metaDescription,
-              },
-              {
-                property: "og:type",
-                content: "website",
-              },
-              {
-                property: "og:image",
-                content: metaImage,
-              },
-              {
-                name: "twitter:card",
-                content: "summary",
-              },
-              {
-                name: "twitter:creator",
-                content: siteAuthor,
-              },
-              {
-                name: "twitter:title",
-                content: title,
-              },
-              {
-                name: "twitter:description",
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords && keywords.length > 0
-                  ? {
-                      name: "keywords",
-                      content: keywords.join(", "),
-                    }
-                  : []
-              )
-              .concat(meta!)}
-          />
-        );
-      }}
-    />
+    <Helmet title={seo.title} titleTemplate={title ? titleTemplate : ''}>
+      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && <meta property="og:description" content={seo.description} />}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && <meta name="twitter:description" content={seo.description} />}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
   );
-}
-
-SEO.defaultProps = {
-  lang: "en",
-  meta: [],
-  keywords: [],
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
 };
 
 export default SEO;
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
-      title
-      description
-      keywords
-      author {
-        name
-      }
-    }
-  }
-`;
