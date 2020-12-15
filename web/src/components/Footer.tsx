@@ -19,9 +19,9 @@ export default function Footer(){
                 <NavbarDiv><StyledH3>Sider</StyledH3>{navLinks}</NavbarDiv>
                 <Annet>
                     <StyledH3>Annet</StyledH3>
-                    <StyledLinks href='https://www.facebook.com/startntnu'>Facebook</StyledLinks>
-                    <StyledLinks href='https://www.instagram.com/startntnu'>Instagram</StyledLinks>
-                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/'>LinkedIn</StyledLinks>
+                    <StyledLinks href='https://www.facebook.com/startntnu' target="_blank">Facebook</StyledLinks>
+                    <StyledLinks href='https://www.instagram.com/startntnu' target="_blank">Instagram</StyledLinks>
+                    <StyledLinks href='https://www.linkedin.com/company/start-ntnu/' target="_blank">LinkedIn</StyledLinks>
                 </Annet>
             </Wrapper>
         </FooterStyle>
@@ -36,6 +36,7 @@ const FooterStyle = styled.footer`
     flex-direction: row;
     position: relative;
     padding-bottom: 30px;
+    flex-wrap: wrap;
     color:white;
     font-weight: 500;
     background: black;
@@ -56,9 +57,12 @@ const Wrapper = styled.div`
     margin-bottom:auto;
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    width: 100%;
+    max-width: 900px;
+    justify-content:space-between;
     @media (max-width: 700px) {
         flex-direction:column;
+        margin-left: 0;
   }
 `;
 
@@ -74,29 +78,27 @@ const StyledLinks = styled.a`
 
 const Contact = styled.div`
     flex-direction:column;
-    margin-right:30%;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
+      text-align: center;
   }
 `;
 
 const NavbarDiv = styled.nav`
     display:flex;
     flex-direction: column;
-    margin-right:30%;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
-
+      text-align: center;
   }
 `;
 
 const Annet = styled.div`
     display:flex;
     flex-direction: column;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0 auto;
     @media (max-width: 700px) {
-        margin-left:20%;
+      text-align: center;
 
   }
 

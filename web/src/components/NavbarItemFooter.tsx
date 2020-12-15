@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 
 export default function NavbarItemFooter({ name, link }: NavbarItemProps) {
@@ -15,6 +15,6 @@ export default function NavbarItemFooter({ name, link }: NavbarItemProps) {
 const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
   color: white;
-  font-size: 2vh;
+  font-size: 18px;
   line-height: 2;
 `;

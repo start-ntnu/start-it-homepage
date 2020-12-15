@@ -1,7 +1,7 @@
 export const NavLinks: NavbarItemProps[] = [
-  { name: "Program", link: "program" },
-  { name: "Blog", link: "blog" },
-  { name: "Partners", link: "partners" },
-  { name: "StartNTNU", link: "startntnu" },
-  { name: "The Team", link: "team" },
+  { name: "PROGRAM", link: "program" },
+  { name: "BLOGG", link: "blog" },
+  { name: "SAMARBEIDSPARTNERE", link: "partners" },
+  { name: "STARTNTNU", link: "startntnu" },
+  { name: "TEAMET", link: "team" },
 ];
