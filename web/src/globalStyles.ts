@@ -2,9 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  * {
-    font-family:'Arial';
-    
-   
+    font-family:'Playfair Display', serif;
+
  }
  body {
     overflow-x: hidden;

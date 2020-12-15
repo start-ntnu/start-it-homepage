@@ -1,6 +1,6 @@
 import * as React from "react";
-import { NavLinks } from "../fixtures/Navigation";
 import styled from "styled-components";
+import { NavLinks } from "../fixtures/navLinks";
 import NavbarItemFooter from "./NavbarItemFooter";
 
 export default function Footer(){
@@ -81,7 +81,7 @@ const NavbarDiv = styled.nav`
     margin-right:30%;
     @media (max-width: 700px) {
         margin-left:20%;
-        
+
   }
 `;
 
@@ -92,7 +92,7 @@ const Annet = styled.div`
     margin-right:auto;
     @media (max-width: 700px) {
         margin-left:20%;
-        
+
   }
-    
+
 `;

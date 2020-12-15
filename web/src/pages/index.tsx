@@ -1,11 +1,8 @@
-import React, { Fragment } from "react";
-import Layout from "../components/Layout";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { GlobalStyle } from "../globalStyles";
-import StartITVideo from "../assets/startit.mp4";
-import Header from "../components/Header";
+import React from "react";
+import styled from "styled-components";
+import Layout from "../components/Layout";
 export const query = graphql`
   query {
     StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
@@ -29,12 +26,6 @@ export const query = graphql`
 export default function App({ data }) {
   return (
     <Layout>
-      <VideoWrapper>
-        <VideoStyle height="100%" width="100%" loop muted autoPlay>
-          <source src={StartITVideo} type="video/mp4" />
-        </VideoStyle>
-      </VideoWrapper>
-
       <ImageWrapper>
         <Title>StartIT 2021</Title>
         <Article>
@@ -81,12 +72,6 @@ const Article = styled.p`
   }
 `;
 
-const VideoStyle = styled.video`
-  margin-bottom: -0.5%;
-  @media (max-width: 800px) {
-    margin-bottom: -1%;
-  }
-`;
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -96,11 +81,6 @@ const ImageWrapper = styled.div`
   margin-right: auto;
   height: 60%;
   width: 60%;
-`;
-
-const VideoWrapper = styled.div`
-  margin-top: -12%;
-  box-shadow: 3px 3px 6px 1px rgba(14, 13, 13, 0.65);
 `;
 
 const BorderDiv = styled.div`

@@ -1,11 +1,11 @@
-import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
+import React from "react";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import { imageUrlFor } from "../lib/image-url";
 import { buildImageObj } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
+function SEO({ description, lang, meta, keywords, title = "StartIT 2020", image }) {
   return (
     <StaticQuery
       query={detailsQuery}

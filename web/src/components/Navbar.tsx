@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { NavLinks } from "../fixtures/Navigation";
+import { NavLinks } from "../fixtures/navLinks";
 import NavbarItem from "./NavbarItem";
 
 const Toggle = styled.div`

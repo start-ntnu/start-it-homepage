@@ -20,8 +20,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-source-sanity",
@@ -31,6 +30,16 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Playfair Display`,
+          `serif\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
     },
     "gatsby-plugin-typescript",
   ],
