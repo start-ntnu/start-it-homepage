@@ -1,12 +1,12 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 
 export default function NavbarItem({ name, link }: NavbarItemProps) {
   return (
     <>
       <StyledLink to={`/${link}/`}>
-        <span>{name}</span>
+        {name}
       </StyledLink>
     </>
   );
@@ -18,6 +18,9 @@ const StyledLink = styled((props) => <Link {...props} />)`
   font-size: 2vh;
   line-height: 2;
   margin-left: 5vh;
+  :hover {
+    color: #BD6631;
+  }
   @media (max-width: 1000px) {
     color: white;
   }

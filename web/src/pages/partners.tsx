@@ -1,9 +1,9 @@
-import { graphql } from "gatsby";
 import React from "react";
+import Typing from 'react-typing-animation';
 import styled from "styled-components";
 import Layout from "../components/Layout";
 
-export const query = graphql`
+/*export const query = graphql`
   query {
     Facebook: file(relativePath: { eq: "partners/Facebook.png" }) {
       childImageSharp {
@@ -27,21 +27,25 @@ export const query = graphql`
     }
   }
 }
-`;
+`;*/
 
 export default function Partners({ data }) {
   return (
     <div className="App">
       <Layout>
-        <Title>Samarbeidspartnere</Title>
-        <Article>
-          Er din bedrift opptatt av innovasjon og teknologi? Vil dere være en
-          del av NTNU`s mest fremover lente IT konferanse? Vil dere få møte noen
-          av NTUS`s mest engasjerte og ny tenkende studenter og være med på å
-          inspirere dem? Da er det bare å ta kontakt!
-        </Article>
+        <Title><div><span style={{color: '#BD6631'}}>SAMARBEIDS</span>PARTNERE</div></Title>
+        <Typing>
+        <SubTitle><div>SOM <span style={{color: '#BD6631'}}>SAMARBEIDSPARTNER</span> FÅR DERE:</div></SubTitle>
+        </Typing>
+        <StyledList>
+          <StyledLi>Vise dere frem som en <span style={{color: '#BD6631'}}>spennende og innovativ bedrift.</span></StyledLi>
+          <StyledLi>Komme i god kontakt med noen av <span style={{color: '#BD6631'}}>landets dyktigste studenter.</span></StyledLi>
+          <StyledLi>Være med på å <span style={{color: '#BD6631'}}>inspirere og motivere </span>studenter til å ville jobbe med innovasjon og IT.</StyledLi>
+        </StyledList>
+        <SubTitle>INTERESSERT?</SubTitle>
+        <SubTitle><span style={{color: '#BD6631'}}>Kontakt oss</span> på isabel.slorer@startntnu.no</SubTitle>
         <ProspektLink
-          href={"/StartIT2021.pdf"}
+          href={"/ProspektStartIT2021.pdf"}
           target="_blank"
         >
           Sjekk ut prospektet
@@ -193,31 +197,37 @@ const Title = styled.h1`
   }
 `;
 
+const SubTitle = styled.h2`
+  margin: 15px auto;
+  justify-content: center;
+  text-align: center;
+`;
+
 const ProspektLink = styled.a`
   display: block;
   justify-content: center;
   text-align: center;
   text-decoration: underline;
-  color: black;
+  color: gray;
   &:hover {
-    color: grey;
+    color: white;
   }
 `;
 
-const Article = styled.p`
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const StyledList = styled.ul`
+  margin: 32px auto;
   text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
-  @media (max-width: 1268px) {
-    font-size: 15px;
-  }
+  list-style: none;
+  line-height: 2;
+  height: 350px;
 `;
 
-const PartnerWrapper = styled.div`
+const StyledLi = styled.li`
+margin: 0 auto;
+font-size: 20px;
+`;
+
+/*const PartnerWrapper = styled.div`
   margin-top: 5%;
 `;
 const Partner = styled.div`
@@ -257,4 +267,4 @@ const PartnerName = styled.h2`
   @media (max-width: 1268px) {
     font-size: 36px;
   }
-`;
+`;*/

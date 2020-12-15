@@ -1,14 +1,12 @@
-import React from "react";
 import { graphql } from "gatsby";
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture,
-} from "../lib/helpers";
-import BlogPostPreviewList from "../components/BlogPostPreviewList";
-import SEO from "../components/SEO";
-import Layout from "../components/Layout";
+import React from "react";
 import styled from "styled-components";
+import BlogPostPreviewList from "../components/BlogPostPreviewList";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import {
+  filterOutDocsPublishedInTheFuture, filterOutDocsWithoutSlugs, mapEdgesToNodes
+} from "../lib/helpers";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -91,7 +89,7 @@ const IndexPage = (props) => {
         image={undefined}
       />
       <div>
-        <Title hidden>Velkommen til StartIT`s blogg</Title>
+        <Title hidden><span style={{color: '#BD6631'}}>NYHETER</span></Title>
         {/*add styling*/}
         {postNodes && (
           <BlogPostPreviewList

@@ -1,9 +1,9 @@
-import { format, distanceInWords, differenceInDays } from "date-fns";
+import { differenceInDays, distanceInWords, format } from "date-fns";
 import React from "react";
+import styled from "styled-components";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import PortableText from "./PortableText";
-import styled from "styled-components";
 
 function BlogPost(props) {
   const { _rawBody, title, mainImage, publishedAt } = props;
@@ -83,11 +83,11 @@ const Title = styled.h1`
 const Article = styled.p`
   font-size: 20px;
   display: flex;
+  max-width: 800px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 16px auto;
   @media (max-width: 1268px) {
     font-size: 20px;
   }
@@ -104,6 +104,7 @@ const ImageWrapper = styled.div`
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+  max-width: 700px;
 `;
 const StyledImage = styled.img`
   margin-left: 20%;
