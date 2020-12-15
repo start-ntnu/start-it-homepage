@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLinks } from "../fixtures/navLinks";
 import NavbarItem from "./NavbarItem";
+import NavbarItemMobile from "./NavBarItemMobile";
 
 const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
   padding: 0 10vw;
+  margin-right: -25px;
 
   @media (max-width: 1000px) {
     display: flex;
@@ -21,13 +23,14 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
-  margin-right: -50px;
+  margin-right: -60px;
   transform: ${(props) => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,
   ::after {
     width: 30px;
     height: 3px;
+    margin-right: -60px;
     background-color: white;
     content: "";
     position: absolute;
@@ -51,7 +54,16 @@ export default function Navbar() {
   const navLinks = NavLinks.map((link: any, index: number) => (
     <NavbarItem key={index} name={link.name} link={link.link} />
   ));
+  const navLinksMobile = NavLinks.map((link: any, index: number) => (
+    <NavbarItemMobile key={index} name={link.name} link={link.link} />
+  ));
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  if (navbarOpen){
+    document.body.style.position = 'fixed';
+  } else {
+    document.body.style.position = 'relative';
+  }
 
   return (
     <Navigation>
@@ -63,7 +75,7 @@ export default function Navbar() {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <NavbarDiv>{navLinks}</NavbarDiv>
+          <NavbarDivMobile>{navLinksMobile}</NavbarDivMobile>
         </Navbox>
       ) : (
         <Navbox open>
@@ -76,6 +88,16 @@ export default function Navbar() {
 
 const NavbarDiv = styled.nav`
   display: flex;
+  flex-direction: row;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+const NavbarDivMobile = styled.nav`
+  display: flex;
+  position: fixed;
+  height: 100%;
   flex-direction: row;
   @media (max-width: 1000px) {
     flex-direction: column;

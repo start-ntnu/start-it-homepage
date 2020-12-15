@@ -41,6 +41,7 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   margin: 0px;
   position: relative;
+  z-index: 2;
 `;
 
 const FlexWrapper = styled.div`
@@ -50,6 +51,7 @@ const FlexWrapper = styled.div`
 
 const StyledImg = styled(Img)`
   width: 50px;
+  z-index: 2;
 `;
 
 const Title = styled.h1`
