@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import BlogPostPreviewList from "../components/BlogPostPreviewList";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 import {
   filterOutDocsPublishedInTheFuture, filterOutDocsWithoutSlugs, mapEdgesToNodes
 } from "../lib/helpers";

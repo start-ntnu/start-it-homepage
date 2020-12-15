@@ -21,6 +21,7 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
+  margin-right: -50px;
   transform: ${(props) => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,

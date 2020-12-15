@@ -19,5 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 
  main {
    min-height: 90vh;
+   padding: 16px;
  }
 `;
