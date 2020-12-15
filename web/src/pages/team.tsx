@@ -75,8 +75,6 @@ export default function Team({ data }) {
             <Name><div><span style={{color: '#BD6631'}}>Mille</span>  Richardsen</div></Name>
             <Email>mille.richardsen@startntnu.no </Email>
           </PersonContainer>
-        </PictureContainer>
-        <PictureContainer>
           <PersonContainer>
             <ImageWrapper>
               <Img fluid={data.Snorre.childImageSharp.fluid} alt="Snorre" />
@@ -109,28 +107,28 @@ const Name = styled.h2`
     font-size: 18px;
   }
   @media (max-width: 800px) {
-    font-size: 12px;
+    font-size: 16px;
   }
   @media (max-width: 550px) {
-    font-size: 10px;
+    font-size: 14px;
   }
 `;
 const Email = styled.h2`
   margin-top: 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   @media (max-width: 1268px) {
-    font-size: 15px;
+    font-size: 18px;
   }
   @media (max-width: 800px) {
-    font-size: 12px;
+    font-size: 16px;
   }
   @media (max-width: 550px) {
-    font-size: 8px;
+    font-size: 14px;
   }
 `;
 
@@ -155,22 +153,18 @@ const Title = styled.h1`
 const PictureContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   margin: auto;
-  @media (max-width: 800px) {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 `;
 
 const PersonContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 30%;
-  height: 40%;
+  width: 400px;
   @media (max-width: 800px) {
-    flex-direction: column;
-    width: 50%;
+    width: 300px;
   }
 `;
 
@@ -178,6 +172,4 @@ const ImageWrapper = styled.div`
   margin: 0 auto;
   max-width: 500px;
   min-width: 300px;
-  height: 60%;
-  width: 60%;
 `;
