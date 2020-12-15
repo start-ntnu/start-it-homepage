@@ -2,8 +2,11 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import styled from 'styled-components';
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 export default function App({ data }) {
   return (
+    <>
+    <SEO title={'Program'}/>
     <Layout>
         <Title>
           <div><span style={{color: '#BD6631'}}>ÅRETS</span> PROGRAM</div>
@@ -35,6 +38,7 @@ export default function App({ data }) {
   >Avslutning med bankett på kvelden.</VerticalTimelineElement>
 </VerticalTimeline>
     </Layout>
+    </>
   );
 }
 

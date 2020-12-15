@@ -2,6 +2,7 @@ import React from "react";
 import Typing from 'react-typing-animation';
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 /*export const query = graphql`
   query {
@@ -32,6 +33,7 @@ import Layout from "../components/Layout";
 export default function Partners({ data }) {
   return (
     <div className="App">
+      <SEO title={"Samarbeidspartnere"} />
       <Layout>
         <Title><div><span style={{color: '#BD6631'}}>SAMARBEIDS</span>PARTNERE</div></Title>
         <Typing>

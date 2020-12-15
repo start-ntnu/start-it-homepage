@@ -83,10 +83,8 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO
-        title={site.title}
+        title={"Nyheter"}
         description={site.description}
-        keywords={site.keywords}
-        image={undefined}
       />
       <div>
         <Title hidden><span style={{color: '#BD6631'}}>NYHETER</span></Title>

@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export const membersQuery = graphql`
   query {
@@ -50,6 +51,8 @@ export const membersQuery = graphql`
 
 export default function Team({ data }) {
   return (
+    <>
+    <SEO title={"Teamet"} />
     <Layout>
       <div className="App">
         <Title><div><span style={{color: '#BD6631'}}>Teamet</span> 2021</div></Title>
@@ -92,6 +95,7 @@ export default function Team({ data }) {
         </PictureContainer>
       </div>
     </Layout>
+    </>
   );
 }
 

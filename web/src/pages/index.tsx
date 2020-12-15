@@ -3,6 +3,7 @@ import React from "react";
 import Typing from 'react-typing-animation';
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export const query = graphql`
   query {
@@ -18,6 +19,8 @@ export const query = graphql`
 
 export default function App({ data }) {
   return (
+    <>
+    <SEO />
     <Layout>
       <Container>
         <Title><span style={{color: '#BD6631'}}>START</span>IT 2021</Title>
@@ -43,6 +46,7 @@ export default function App({ data }) {
         </Article>
         </Container>
     </Layout>
+    </>
   );
 }
 

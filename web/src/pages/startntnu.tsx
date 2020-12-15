@@ -1,9 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
 import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export default function App({ data }) {
   return (
+    <>
+    <SEO title={'Start NTNU'}/>
     <Layout>
         <Title><div>HVEM ER <span style={{color: '#BD6631'}}>START</span> NTNU?</div></Title>
         <Article>
@@ -22,6 +25,7 @@ export default function App({ data }) {
           Sjekk oss ut <a href="https://www.startntnu.no/" target="_blank">her</a>
         </SubTitle>
     </Layout>
+    </>
   );
 }
 
