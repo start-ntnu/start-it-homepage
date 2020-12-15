@@ -1,4 +1,5 @@
 import React from "react";
+import 'react-vertical-timeline-component/style.min.css';
 import { GlobalStyle } from "../globalStyles";
 import Footer from "./Footer";
 import Header from "./Header";

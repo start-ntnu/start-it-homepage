@@ -18,6 +18,6 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  main {
-   min-height: 80vh;
+   min-height: 90vh;
  }
 `;

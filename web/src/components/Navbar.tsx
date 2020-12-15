@@ -13,6 +13,7 @@ const Toggle = styled.div`
     display: flex;
   }
 `;
+
 const Hamburger = styled.div`
   background-color: white;
   width: 30px;
@@ -33,14 +34,14 @@ const Hamburger = styled.div`
   }
 
   ::before {
-    transform: ${(props) =>
+    transform: ${(props: any) =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
-    opacity: ${(props) => (props.open ? "0" : "1")};
-    transform: ${(props) => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    opacity: ${(props: any) => (props.open ? "0" : "1")};
+    transform: ${(props: any) => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
   }
 `;
