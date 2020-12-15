@@ -69,6 +69,7 @@ const Title = styled.h1`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color:  #BD6631;
   @media (max-width: 1268px) {
     font-size: 36px;
   }
