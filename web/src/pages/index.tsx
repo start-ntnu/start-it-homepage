@@ -27,23 +27,43 @@ export default function App({ data }) {
         <Typing>
         <SubTitle>En innovativ konferanse.</SubTitle>
         </Typing>
-        <Article>
-          {" "}
-          På NTNU utdannes det for øyeblikket mange tusen studenter som snart
-          skal ut i jobb og må finne ut hva de vil jobbe med.
-          StartIT har som formål å motivere og inspirere studentene ved NTNU til
-          å ville jobbe med å løse problemer ved hjelp av innovasjon og
-          teknologien som de lærer her på NTNU.
-          <br /><br />
-        Vi ønsker å skifte fokuset fra “hvor kan man tjene mest
-          penger” til “hvordan kan man være med å løse de mest spennende
-          problemene vi står ovenfor i dag”.
-         Dette forsøker vi å gjøre ved å vise mulighetene
-          som finnes til å jobbe med innovasjon innenfor teknologi. Det kan være
-          alt fra å vise frem de mest innovative inhouse bedriftene, de mest
-          kreative konsulentselskapene, de kuleste startupsene, eller hvordan
-          man kan starte noe eget.
-        </Article>
+        <HeaderArticle>
+          <div>Teknologi - <span style={{color: '#BD6631'}}>Innovasjon</span> - Muligheter</div>
+      </HeaderArticle>
+      <ContentContainer>
+        <ContainerContentLeft>
+        <ContainerSubTitle><span style={{color: '#BD6631'}}>Hvorfor</span></ContainerSubTitle>
+        <ContainerContentText>
+          Verden er avhengig av nye og teknologiske løsninger for å kunne løse noen av de største <span style={{color: '#BD6631'}}>utfordringene</span> vi står overfor i dag.
+          <br />
+          <br />
+          For å opprettholde velstanden i Norge vil vi trenge over <span style={{color: '#BD6631'}}>250 000 nye arbeidsplasser</span> innen 2030.
+          <br />
+          <br />
+          NTNU har noen av landets dyktigste <span style={{color: '#BD6631'}}>IT-studenter</span> som snart skal ta fatt på disse utfordringene.
+          <br />
+          <br />
+          Vi vil vise dere <span style={{color: '#BD6631'}}>mulighetene.</span>
+</ContainerContentText>
+        </ContainerContentLeft>
+        <ContainerContentRight>
+        <ContainerSubTitle><span style={{color: '#BD6631'}}>Hvordan</span></ContainerSubTitle>
+        <ContainerContentText>På årets StartIT vil vi vise deg hvordan man kan jobbe med fremtidens teknologier i samarbeid med <span style={{color: '#BD6631'}}>Visma</span> og <span style={{color: '#BD6631'}}>Iterate.</span>
+      <br />
+      <br />
+      Vi vil eksponere deg for noen av landets mest suksessfulle <span style={{color: '#BD6631'}}>gründere</span>, og eksperter på <span style={{color: '#BD6631'}}>teknologi.</span>  </ContainerContentText>
+        </ContainerContentRight>
+        <ContainerContentLeft>
+        <ContainerSubTitle><span style={{color: '#BD6631'}}>Hva</span></ContainerSubTitle>
+        <ContainerContentText>
+        StartIT er en innovativ IT-konferanse som arrangeres for å inspirere nettopp <span style={{color: '#BD6631'}}>deg.</span>
+      <br />
+      <br />
+      <span style={{color: '#BD6631'}}>18. Mars</span> braker det løs med det mest spennende arrangementet NTNU har å by på 2021.
+
+</ContainerContentText>
+        </ContainerContentLeft>
+      </ContentContainer>
         </Container>
     </Layout>
     </>
@@ -51,7 +71,6 @@ export default function App({ data }) {
 }
 
 const SubTitle = styled.h2`
-  margin: 0 auto;
   justify-content: center;
   text-align: center;
 `;
@@ -72,6 +91,10 @@ const Article = styled.p`
   }
 `;
 
+const HeaderArticle = styled(Article)`
+  font-size: 24px;
+`;
+
 const Title = styled.h1`
   font-weight: bold;
   font-size: 50px;
@@ -87,5 +110,31 @@ const Container = styled.div`
   display: flex;
   align-content: center;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 800px;
 `
+
+const ContentContainer = styled.div`
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContainerContentLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: start;
+`;
+
+const ContainerContentRight = styled.div`
+  flex-direction: column;
+  align-items: right;
+  text-align: end;
+`;
+
+const ContainerSubTitle = styled.h2`
+
+`;
+
+const ContainerContentText = styled.p`
+`;
