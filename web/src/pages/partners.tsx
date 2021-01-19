@@ -31,10 +31,9 @@ export default function Partners({ data }) {
       <Layout>
         <Title><div>ÅRETS <span style={{color: '#BD6631'}}>SAMARBEIDS</span>PARTNERE</div></Title>
         <SubTitle>Hovedsamarbeidspartner - <span style={{color: '#BD6631'}}>Visma</span></SubTitle>
-        <ImageContainer fluid={data.Visma.childImageSharp.fluid} />
+        <a href="https://www.visma.no/consulting/konsulenttjenester/" target="_blank"><ImageContainer fluid={data.Visma.childImageSharp.fluid} alt="Visma"/></a>
         <SubSubTitle>Samarbeidspartner - <span style={{color: '#BD6631'}}>Iterate</span></SubSubTitle>
-        <ImageContainer fluid={data.Iterate.childImageSharp.fluid} />
-
+        <a href="https://www.iterate.no/" target="_blank"><ImageContainer fluid={data.Iterate.childImageSharp.fluid} alt="Iterate"/></a>
       </Layout>
     </>)}
 
