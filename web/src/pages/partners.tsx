@@ -31,9 +31,13 @@ export default function Partners({ data }) {
       <Layout>
         <Title><div>ÅRETS <span style={{color: '#BD6631'}}>SAMARBEIDS</span>PARTNERE</div></Title>
         <SubTitle>Hovedsamarbeidspartner - <span style={{color: '#BD6631'}}>Visma</span></SubTitle>
-        <a href="https://www.visma.no/consulting/konsulenttjenester/" target="_blank"><ImageContainer fluid={data.Visma.childImageSharp.fluid} alt="Visma"/></a>
+        <ImageWrapper>
+        <LinkWrapper href="https://www.visma.no/consulting/konsulenttjenester/" target="_blank"><ImageContainer fluid={data.Visma.childImageSharp.fluid} alt="Visma"/></LinkWrapper>
+        </ImageWrapper>
         <SubSubTitle>Samarbeidspartner - <span style={{color: '#BD6631'}}>Iterate</span></SubSubTitle>
-        <a href="https://www.iterate.no/" target="_blank"><ImageContainer fluid={data.Iterate.childImageSharp.fluid} alt="Iterate"/></a>
+        <ImageWrapper>
+        <LinkWrapper href="https://www.iterate.no/" target="_blank"><ImageContainer fluid={data.Iterate.childImageSharp.fluid} alt="Iterate"/></LinkWrapper>
+        </ImageWrapper>
       </Layout>
     </>)}
 
@@ -61,6 +65,17 @@ const SubSubTitle = styled.h3`
 `;
 
 const ImageContainer = styled(Img)`
-  width: 300px;
+  width: 100%;
   margin: 32px auto;
+  width: 300px;
 `;
+
+const LinkWrapper = styled.a`
+  margin: 32px auto;
+  width: 300px;
+`;
+
+const ImageWrapper = styled.div`
+  width: 300px;
+  margin: 0px auto;
+`
