@@ -1,13 +1,30 @@
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import React from "react";
 import styled from 'styled-components';
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
+
+export const query = graphql`
+  query {
+    start: file(relativePath: { eq: "start_ntnu.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+}
+`;
 
 export default function App({ data }) {
   return (
     <>
     <SEO title={'Start NTNU'}/>
     <Layout>
+        <ImageWrapper>
+          <LinkWrapper href="https://www.startntnu.no/" target="_blank"><ImageContainer fluid={data.start.childImageSharp.fluid} alt="Start NTNU"/></LinkWrapper>
+        </ImageWrapper>
         <Title><div>HVEM ER <span style={{color: '#BD6631'}}>START</span> NTNU?</div></Title>
         <Article>
           Start NTNU er en non-profit studentorganisasjon som jobber for at
@@ -59,3 +76,19 @@ const SubTitle = styled.h2`
   justify-content: center;
   text-align: center;
 `;
+
+const ImageContainer = styled(Img)`
+  width: 100%;
+  margin: 32px auto;
+  width: 300px;
+`;
+
+const LinkWrapper = styled.a`
+  margin: 32px auto;
+  width: 300px;
+`;
+
+const ImageWrapper = styled.div`
+  width: 300px;
+  margin: 0px auto;
+`
