@@ -14,6 +14,13 @@ export const query = graphql`
         }
       }
     }
+    NTNU: file(relativePath: { eq: "partners/ntnu.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   Iterate: file(relativePath: { eq: "partners/Iterate.png" }) {
     childImageSharp {
       fluid {
@@ -38,6 +45,11 @@ export default function Partners({ data }) {
         <ImageWrapper>
         <LinkWrapper href="https://www.iterate.no/" target="_blank"><ImageContainer fluid={data.Iterate.childImageSharp.fluid} alt="Iterate"/></LinkWrapper>
         </ImageWrapper>
+        <SubSubTitle>Støtte fra - <span style={{color: '#BD6631'}}>NTNU IE fakultetet</span></SubSubTitle>
+        <ImageWrapper>
+        <LinkWrapper href="https://www.ntnu.no/ie/fakultet-for-informasjonsteknologi-matematikk-og-elektroteknikk" target="_blank"><ImageContainer fluid={data.NTNU.childImageSharp.fluid} alt="IE fakultetet"/></LinkWrapper>
+        </ImageWrapper>
+
       </Layout>
     </>)}
 
@@ -78,4 +90,6 @@ const LinkWrapper = styled.a`
 const ImageWrapper = styled.div`
   width: 300px;
   margin: 0px auto;
+  background-color: white;
+  padding: 10px;
 `
