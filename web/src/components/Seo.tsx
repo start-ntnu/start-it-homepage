@@ -59,6 +59,8 @@ const SEO = ({ title, description, image, article }: SEOProps) => {
 
   return (
     <Helmet title={seo.title} titleTemplate={title ? titleTemplate : ''}>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

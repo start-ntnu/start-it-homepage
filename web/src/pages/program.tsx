@@ -39,7 +39,7 @@ export default function App({ data }) {
     date="18. mars"
     iconStyle={{ background: 'white', color: 'white' }}
     icon={""}
-  ><HeaderTitle color={'#BD6631'}>Mingling med StartUps på Gather.town</HeaderTitle>
+  ><HeaderTitle>Mingling med StartUps på Gather.town</HeaderTitle>
   <Paragraph color={'#BD6631'}>16:00 Dørene åpner på Gather.town</Paragraph>
   <Paragraph color={'#BD6631'}>Lightning talks med utvalgte StartUps</Paragraph>
   </VerticalTimelineElement>
@@ -51,7 +51,7 @@ export default function App({ data }) {
     iconStyle={{ background: 'black', color: '#fff' }}
     date="18. mars"
     icon={""}
-  ><HeaderTitle>Kveldsarrangement</HeaderTitle>
+  ><HeaderTitle color={'#BD6631'}>Kveldsarrangement</HeaderTitle>
   <Paragraph>18:00 åpning ved Eirik Norman Hansen</Paragraph>
   <Paragraph>Norges digitale fremtid ved Silvija Seres</Paragraph>
   <Paragraph>Cybersecurity ved Visma</Paragraph>
