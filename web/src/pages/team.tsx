@@ -15,7 +15,7 @@ export const membersQuery = graphql`
       }
     }
 
-    Andreas: file(relativePath: { eq: "members/Andreas.jpg" }) {
+    Sandra: file(relativePath: { eq: "members/Sandra.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -24,6 +24,14 @@ export const membersQuery = graphql`
     }
 
     Mille: file(relativePath: { eq: "members/Mille.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Jon: file(relativePath: { eq: "members/Jon.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -66,10 +74,17 @@ export default function Team({ data }) {
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
-              <Img fluid={data.Andreas.childImageSharp.fluid} alt="Andreas" />
+              <Img fluid={data.Sandra.childImageSharp.fluid} alt="Sandra" />
             </ImageWrapper>
-            <Name><div><span style={{color: '#BD6631'}}>Andreas</span> Rikheim</div></Name>
-            <Email>andreas.rikheim@startntnu.no </Email>
+            <Name><div><span style={{color: '#BD6631'}}>Sandra</span>  Seville</div></Name>
+            <Email>sandra.seville@startntnu.no </Email>
+          </PersonContainer>
+          <PersonContainer>
+            <ImageWrapper>
+              <Img fluid={data.Jon.childImageSharp.fluid} alt="Jon" />
+            </ImageWrapper>
+            <Name><div><span style={{color: '#BD6631'}}>Jon</span> Smebye</div></Name>
+            <Email>jon.smebye@startntnu.no </Email>
           </PersonContainer>
           <PersonContainer>
             <ImageWrapper>
