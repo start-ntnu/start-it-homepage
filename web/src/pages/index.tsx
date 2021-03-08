@@ -1,76 +1,11 @@
-import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import React from "react";
-import Slider from "react-slick";
 import Typing from 'react-typing-animation';
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
-
-export const query = graphql`
-  query {
-    StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    Anglero: file(relativePath: { eq: "speakers/Anglero.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    Eirik: file(relativePath: { eq: "speakers/Eirik.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    Ringnes: file(relativePath: { eq: "speakers/Ringnes.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    Seres: file(relativePath: { eq: "speakers/Silvia.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    Nancy: file(relativePath: { eq: "speakers/Nancy.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`;
-
 export default function App({ data }) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  };
-
   return (
     <>
     <SEO />
@@ -83,28 +18,8 @@ export default function App({ data }) {
         <HeaderArticle>
           <div>Teknologi - <span style={{color: '#BD6631'}}>Innovasjon</span> - Muligheter</div>
       </HeaderArticle>
-      <Slider {...settings}>
-          <SpeakerContainer>
-            <SubTitle>Thomas Anglero</SubTitle>
-            <SpeakerImg fluid={data?.Anglero?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
-          </SpeakerContainer>
-          <SpeakerContainer>
-            <SubTitle>Eirik Normann Hansen</SubTitle>
-            <SpeakerImg fluid={data?.Eirik?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
-          </SpeakerContainer>
-          <SpeakerContainer>
-            <SubTitle>Isabelle Ringnes</SubTitle>
-            <SpeakerImg fluid={data?.Ringnes.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
-          </SpeakerContainer>
-          <SpeakerContainer>
-            <SubTitle>Silvija Seres</SubTitle>
-            <SpeakerImg fluid={data?.Seres.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
-          </SpeakerContainer>
-          <SpeakerContainer>
-            <SubTitle>Nancy Giordano</SubTitle>
-            <SpeakerImg fluid={data?.Nancy.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
-          </SpeakerContainer>
-        </Slider>
+      <SubTitle>Påmelding er åpnet!</SubTitle>
+      <SubTitle>Trykk <a style={{color: '#BD6631'}} href="https://startit2021.hoopla.no/sales">her</a> for å melde deg på.</SubTitle>
       <ContentContainer>
         <ContainerContentLeft>
         <ContainerSubTitle><span style={{color: '#BD6631'}}>Hvorfor</span></ContainerSubTitle>
@@ -141,9 +56,7 @@ export default function App({ data }) {
       </ContentContainer>
         </Container>
     </Layout>
-    </>
-  );
-}
+    </>)}
 
 const SubTitle = styled.h2`
   justify-content: center;

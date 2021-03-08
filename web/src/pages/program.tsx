@@ -1,14 +1,104 @@
+import { graphql } from "gatsby";
+import Img from 'gatsby-image';
 import React from "react";
+import Slider from "react-slick";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import styled from 'styled-components';
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
+export const query = graphql`
+  query {
+    StartNTNU: file(relativePath: { eq: "Startlogo.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Anglero: file(relativePath: { eq: "speakers/Anglero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Eirik: file(relativePath: { eq: "speakers/Eirik.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Ringnes: file(relativePath: { eq: "speakers/Ringnes.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Seres: file(relativePath: { eq: "speakers/Silvia.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    Nancy: file(relativePath: { eq: "speakers/Nancy.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
+
 export default function App({ data }) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
   return (
     <>
     <SEO title={'Program'}/>
     <Layout>
+      <Title style={{color: '#BD6631'}}>SPEAKERS</Title>
+      <Container>
+      <Slider {...settings}>
+          <SpeakerContainer>
+            <SubTitle>Thomas Anglero</SubTitle>
+            <SpeakerImg fluid={data?.Anglero?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+          </SpeakerContainer>
+          <SpeakerContainer>
+            <SubTitle>Eirik Normann Hansen</SubTitle>
+            <SpeakerImg fluid={data?.Eirik?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+          </SpeakerContainer>
+          <SpeakerContainer>
+            <SubTitle>Isabelle Ringnes</SubTitle>
+            <SpeakerImg fluid={data?.Ringnes.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+          </SpeakerContainer>
+          <SpeakerContainer>
+            <SubTitle>Silvija Seres</SubTitle>
+            <SpeakerImg fluid={data?.Seres.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+          </SpeakerContainer>
+          <SpeakerContainer>
+            <SubTitle>Nancy Giordano</SubTitle>
+            <SpeakerImg fluid={data?.Nancy.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+          </SpeakerContainer>
+        </Slider>
+        </Container>
         <Title>
           <div><span style={{color: '#BD6631'}}>ÅRETS</span> PROGRAM</div>
         </Title>
@@ -67,6 +157,15 @@ export default function App({ data }) {
   );
 }
 
+
+const Container = styled.div`
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  max-width: 800px;
+`
+
 const Title = styled.h1`
   font-weight: bold;
   font-size: 50px;
@@ -89,4 +188,17 @@ const HeaderTitle = styled.h3`
 
 const Paragraph = styled.p`
   color: ${props => props.color ? props.color : 'white'};
+`;
+
+const SpeakerContainer = styled.div`
+  margin: 0 auto;
+`;
+
+const SpeakerImg = styled(Img)`
+  max-height: 400px;
+`;
+
+const SubTitle = styled.h2`
+  justify-content: center;
+  text-align: center;
 `;
