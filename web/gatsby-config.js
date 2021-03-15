@@ -47,6 +47,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-remark-embedder`,
+      options: {
+        customTransformers: [
+          // Your custom transformers
+        ],
+        services: {
+          // The service-specific options by the name of the service
+        },
+      },
+    },
+    {
       resolve: "gatsby-source-sanity",
       options: {
         ...clientConfig.sanity,

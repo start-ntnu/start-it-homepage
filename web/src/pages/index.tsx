@@ -1,11 +1,10 @@
-import Img from 'gatsby-image';
 import React from "react";
 import Typing from 'react-typing-animation';
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
-export default function App({ data }) {
+export default function App() {
   return (
     <>
     <SEO />
@@ -124,11 +123,4 @@ const ContainerSubTitle = styled.h2`
 `;
 
 const ContainerContentText = styled.p`
-`;
-
-const SpeakerContainer = styled.div`
-`;
-
-const SpeakerImg = styled(Img)`
-  max-height: 400px;
 `;
