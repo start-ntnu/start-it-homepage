@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  * {
-    font-family:'Arvo', serif;
+    font-family: 'Fira Code', monospace;
     color: white;
 
  }

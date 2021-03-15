@@ -78,24 +78,41 @@ export default function App({ data }) {
       <Container>
       <Slider {...settings}>
           <SpeakerContainer>
-            <SubTitle>Thomas Anglero</SubTitle>
+            <SubTitle>Thomas Anglero - F*ck janteloven</SubTitle>
             <SpeakerImg fluid={data?.Anglero?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+            <SpeakerText>Thomas Anglero har vært Nordisk direktør for innovasjon for IBM med ansvar for innovasjon med IBM-kunder i Norden og Europa, og styremedlem for noen innovative startups. Han er en av de mest etterspurte motivasjons- og inspirasjon-foredragsholderne i verden og ekspert på området innovasjon og kunstig intelligens. Stilen hans er direkte, energisk og ærlig.
+<br /> <br />
+På StartIT kommer Anglero til å avslutte showet med en motiverende tale om å gi f i janteloven, og ikke holde deg selv tilbake.
+
+            </SpeakerText>
           </SpeakerContainer>
           <SpeakerContainer>
             <SubTitle>Eirik Normann Hansen</SubTitle>
             <SpeakerImg fluid={data?.Eirik?.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+            <SpeakerText>Eirik Norman Hansen er en ekte og oppriktig teknologioptimist. Han inspirerer og engasjerer sitt publikum og ble kåret til ”Årets taler 2018” blant nesten 600 foredragsholdere på Talerlisten. Eirik kommer til å lede showet som konferansier på årets StartIT, og sørge for en underholdene kveld.
+</SpeakerText>
           </SpeakerContainer>
           <SpeakerContainer>
-            <SubTitle>Isabelle Ringnes</SubTitle>
+            <SubTitle>Isabelle Ringnes - Gründertips</SubTitle>
             <SpeakerImg fluid={data?.Ringnes.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+            <SpeakerText>Isabelle Ringnes er gründer og produktsjef i selskapet EqualityCheck.it som er en plattform for anonyme vurderinger om mangfold på arbeidsplassen. Hun står bak TENK, et teknologinettverk for kvinner med mål om å inspirere kvinner og jenter til å forme fremtiden med teknologi. Hun er 2 ganger blitt kåret til Inspiring Fifty women in tech og blitt utnevnt som 1 av 6 nordmenn blant de 100 mest innflytelsesrike menneskene i Nordic Tech. Isabelle produserer en av Nordens mest populære podcaster «Future Forecast» og har gitt ut boken Hvem Spanderer. I 2019 var hun en av Norges mest populære foredragsholdere.
+<br /> <br />
+På StartIT vil Isabelle gi deg sine beste tips til hvordan du kan starte bedrift.
+</SpeakerText>
           </SpeakerContainer>
           <SpeakerContainer>
-            <SubTitle>Silvija Seres</SubTitle>
+            <SubTitle>Silvija Seres - Norges digitale fremtid</SubTitle>
             <SpeakerImg fluid={data?.Seres.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+            <SpeakerText>Silvija Seres er matematiker og teknologiinvestor. Hun har bakgrunn fra algoritmeforskning i Oxford, utvikling av søkemotoren Alta Vista i Silicon Valley, strategisk ledelse i Fast Search and Transfer, og tjenesteutvikling i Microsoft. Hun jobber nå som styremedlem i flere store selskaper, inkludert DNV og Ruter og som aktiv investor i flere teknologibedrifter. Hun er aktuell med boken Staten og dataen - Hvorfor Norge må henge med i fremtiden som kommer alt for fort.
+<br /> <br />
+På StartIT kommer Silvija til å snakke om Norges digitale fremtid og hva den vil kreve av oss.
+</SpeakerText>
           </SpeakerContainer>
           <SpeakerContainer>
-            <SubTitle>Nancy Giordano</SubTitle>
+            <SubTitle>Nancy Giordano - Building a better future</SubTitle>
             <SpeakerImg fluid={data?.Nancy.childImageSharp.fluid} imgStyle={{width: 'auto', height: 'auto'}}></SpeakerImg>
+            <SpeakerText>Nancy Giordano er en strategisk futurist, global keynote speaker og bedriftsstrategi. Med mer enn åtti keynote foredrag, og anerkjent som en av verdens fremste kvinnelige futurister, har hun jobbet med mange ledende selskaper for å utvikle mer enn 50 milliarder dollar i virksomhet. Hun elsker å dele denne innsikten om nye teknologier og effekten de vil ha på oss som mennesker, innovatører og medlemmer av samfunnet.
+</SpeakerText>
           </SpeakerContainer>
         </Slider>
         </Container>
@@ -146,9 +163,9 @@ export default function App({ data }) {
   <Paragraph>Norges digitale fremtid ved Silvija Seres</Paragraph>
   <Paragraph>Cybersecurity ved Visma</Paragraph>
   <Paragraph>Sofaprat - Hvordan er det å være gründer?</Paragraph>
-  <Paragraph>Foredrag ved Isabelle Ringnes</Paragraph>
-  <Paragraph>Foredrag ved Nancy Giordano</Paragraph>
-  <Paragraph>Motivasjonsforedrag ved Thomas Anglero</Paragraph>
+  <Paragraph>Gründertips ved Isabelle Ringnes</Paragraph>
+  <Paragraph>Building a better future ved Nancy Giordano</Paragraph>
+  <Paragraph>F*ck janteloven ved Thomas Anglero</Paragraph>
   <Paragraph>20:00 avslutning</Paragraph>
   </VerticalTimelineElement>
 </VerticalTimeline>
@@ -201,4 +218,10 @@ const SpeakerImg = styled(Img)`
 const SubTitle = styled.h2`
   justify-content: center;
   text-align: center;
+`;
+
+const SpeakerText = styled.p`
+  margin: 0 auto;
+  margin: 15px auto 10px auto;
+  font-size: 18px;
 `;

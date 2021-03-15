@@ -59,8 +59,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Arvo`,
-          `serif\:300,400,400i,700` // you can also specify font weights and styles
+          `fira code\:300,400,400i,700,900`,
+          `karma\:400,700`,
         ],
         display: 'swap'
       }
