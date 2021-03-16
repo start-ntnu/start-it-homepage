@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import YouTube from 'react-youtube';
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
 export default function Live() {
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  };
+  const defaultWindowWidth = 1024;
+  const [windowSize, setWindowSize] = useState(defaultWindowWidth);
+
+  useEffect(() => {
+    const setWindowWidth = () => {
+      if (typeof window !== undefined) {
+        setWindowSize(window.innerWidth);
+      }
+    };
+
+    const handleResize = () => {
+      setWindowWidth();
+    };
+
+    if (typeof window !== undefined) {
+      window.addEventListener('resize', handleResize);
+    }
+
+    setWindowWidth();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
     <SEO />
@@ -23,9 +39,9 @@ export default function Live() {
         <HeaderArticle>
           <div>Teknologi - <span style={{color: '#BD6631'}}>Innovasjon</span> - Muligheter</div>
       </HeaderArticle>
-      <VideoWrapper>
+      {windowSize > defaultWindowWidth ? <VideoWrapper>
       <YouTube videoId="isAWBIjyNW8" />
-      </VideoWrapper>
+      </VideoWrapper> : <TextWrapper><p>Denne livestreamen er optimalisert for større skjermer!</p><p>Se streamen direkte fra Youtube <a style={{color: '#BD6631'}} href="https://www.youtube.com/watch?v=isAWBIjyNW8&t=5s">her</a>.</p> </TextWrapper>}
         </Container>
     </Layout>
     </>)}
@@ -79,4 +95,8 @@ const VideoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const TextWrapper = styled.div`
+text-align: center;
 `;
