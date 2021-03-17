@@ -5,7 +5,7 @@ import NavbarItemFooter from "./NavbarItemFooter";
 
 export default function Footer(){
     const navLinks = NavLinks.map((link: any, index: number) => (
-        <NavbarItemFooter  key={index} name={link.name} link={link.link} />
+        <NavbarItemFooter  key={index} name={link.name} link={link.link} directLink={link.directLink}/>
     ));
     return(
         <FooterStyle>

@@ -52,10 +52,10 @@ const Hamburger = styled.div`
 
 export default function Navbar() {
   const navLinks = NavLinks.map((link: any, index: number) => (
-    <NavbarItem key={index} name={link.name} link={link.link} />
+    <NavbarItem key={index} name={link.name} link={link.link} directLink={link.directLink} />
   ));
   const navLinksMobile = NavLinks.map((link: any, index: number) => (
-    <NavbarItemMobile key={index} name={link.name} link={link.link} />
+    <NavbarItemMobile key={index} name={link.name} link={link.link} directLink={link.directLink}/>
   ));
   const [navbarOpen, setNavbarOpen] = useState(false);
 

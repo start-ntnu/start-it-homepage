@@ -1,5 +1,6 @@
 export const NavLinks: NavbarItemProps[] = [
   { name: "LIVE", link: "live"},
+  { name: "PÅMELDING!", directLink: "https://startit2021.hoopla.no/organizer/ticket/events"},
   { name: "PROGRAM", link: "program" },
   { name: "GATHER", link: "gather" },
   { name: "SAMARBEIDSPARTNERE", link: "partners" },
