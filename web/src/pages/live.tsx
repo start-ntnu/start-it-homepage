@@ -29,6 +29,7 @@ export default function Live() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   return (
     <>
     <SEO />
@@ -40,8 +41,8 @@ export default function Live() {
           <div>Teknologi - <span style={{color: '#BD6631'}}>Innovasjon</span> - Muligheter</div>
       </HeaderArticle>
       {windowSize > defaultWindowWidth ? <VideoWrapper>
-      <YouTube videoId="isAWBIjyNW8" />
-      </VideoWrapper> : <TextWrapper><p>Denne livestreamen er optimalisert for større skjermer!</p><p>Se streamen direkte fra Youtube <a style={{color: '#BD6631'}} href="https://www.youtube.com/watch?v=isAWBIjyNW8&t=5s">her</a>.</p> </TextWrapper>}
+      <YouTube videoId="CX8WS-7fIBI" />
+      </VideoWrapper> : <TextWrapper><p>Denne livestreamen er optimalisert for større skjermer!</p><p>Se streamen direkte fra Youtube <a style={{color: '#BD6631'}} href="https://www.youtube.com/watch?v=CX8WS-7fIBI">her</a>.</p> </TextWrapper>}
         </Container>
     </Layout>
     </>)}

@@ -181,6 +181,7 @@ const Container = styled.div`
   align-content: center;
   flex-direction: column;
   max-width: 800px;
+  padding: 5px;
 `
 
 const Title = styled.h1`
@@ -208,7 +209,7 @@ const Paragraph = styled.p`
 `;
 
 const SpeakerContainer = styled.div`
-  margin: 0 auto;
+  margin: 5px auto;
 `;
 
 const SpeakerImg = styled(Img)`

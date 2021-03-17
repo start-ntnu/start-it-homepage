@@ -35,13 +35,13 @@ export default function App() {
           Vi vil vise dere <span style={{color: '#BD6631'}}>mulighetene.</span>
 </ContainerContentText>
         </ContainerContentLeft>
-        <ContainerContentRight>
+        <ContainerContentLeft>
         <ContainerSubTitle><span style={{color: '#BD6631'}}>Hvordan</span></ContainerSubTitle>
         <ContainerContentText>På årets StartIT vil vi vise deg hvordan man kan jobbe med fremtidens teknologier i samarbeid med <span style={{color: '#BD6631'}}>Visma</span> og <span style={{color: '#BD6631'}}>Iterate.</span>
       <br />
       <br />
       Vi vil eksponere deg for noen av landets mest suksessfulle <span style={{color: '#BD6631'}}>gründere</span>, og eksperter på <span style={{color: '#BD6631'}}>teknologi.</span>  </ContainerContentText>
-        </ContainerContentRight>
+        </ContainerContentLeft>
         <ContainerContentLeft>
         <ContainerSubTitle><span style={{color: '#BD6631'}}>Hva</span></ContainerSubTitle>
         <ContainerContentText>
@@ -111,12 +111,6 @@ const ContainerContentLeft = styled.div`
   flex-direction: column;
   align-items: left;
   text-align: start;
-`;
-
-const ContainerContentRight = styled.div`
-  flex-direction: column;
-  align-items: right;
-  text-align: end;
 `;
 
 const ContainerSubTitle = styled.h2`
