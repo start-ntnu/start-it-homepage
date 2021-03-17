@@ -5,8 +5,8 @@ import styled from "styled-components";
 export default function NavbarItemFooter({ name, link, directLink }: NavbarItemProps) {
   return (
     <>
-  { directLink ?  <StyledDirectLink to={`/${link}/`}>
-        <span>{name}</span>
+  { directLink ?  <StyledDirectLink target="_blank" href={directLink}>
+        {name}
       </StyledDirectLink> :
       <StyledLink to={`/${link}/`}>
         <span>{name}</span>

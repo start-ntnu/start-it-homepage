@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typing from 'react-typing-animation';
 import styled from "styled-components";
+import Intro from '../assets/rain.mp4';
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
 export default function App() {
+  useEffect(() => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.muted = true;
+      video.loop = true;
+      video.play();
+    }
+  });
   return (
     <>
     <SEO />
@@ -20,6 +29,11 @@ export default function App() {
       <SubTitle>Påmelding er åpnet!</SubTitle>
       <SubTitle>Trykk <a style={{color: '#BD6631'}} href="https://startit2021.hoopla.no/sales">her</a> for å melde deg på.</SubTitle>
       <ContentContainer>
+        <VideoContainer>
+        <VideoPlayer>
+      <source src={Intro} type="video/mp4" />
+    </VideoPlayer>
+      </VideoContainer>
         <ContainerContentLeft>
         <ContainerSubTitle><span style={{color: '#BD6631'}}>Hvorfor</span></ContainerSubTitle>
         <ContainerContentText>
@@ -117,4 +131,14 @@ const ContainerSubTitle = styled.h2`
 `;
 
 const ContainerContentText = styled.p`
+`;
+
+const VideoContainer = styled.div`
+  margin: 0 auto;
+  width: 100%;
+`;
+
+const VideoPlayer = styled.video`
+  margin: 0 auto;
+  width: 100%;
 `;
