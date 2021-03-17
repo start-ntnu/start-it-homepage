@@ -26,8 +26,6 @@ export default function App() {
         <HeaderArticle>
           <div>Teknologi - <span style={{color: '#BD6631'}}>Innovasjon</span> - Muligheter</div>
       </HeaderArticle>
-      <SubTitle>Påmelding er åpnet!</SubTitle>
-      <SubTitle>Trykk <a style={{color: '#BD6631'}} href="https://startit2021.hoopla.no/sales">her</a> for å melde deg på.</SubTitle>
       <ContentContainer>
         <VideoContainer>
         <VideoPlayer>
