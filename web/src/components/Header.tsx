@@ -31,7 +31,7 @@ export default function Header() {
         <Navbar />
       </HeaderStyle>
       <MessageWrapper>
-        Dersom du har meldt deg på workshop og ikke har mottatt mail - sjekk spam-mail!
+        Dersom du har meldt deg på arrangementene og ikke har mottatt mail - sjekk spam-mail!
     </MessageWrapper>
     </Wrapper>
     </>
