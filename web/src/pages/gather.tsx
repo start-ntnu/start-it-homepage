@@ -158,8 +158,6 @@ Teamet vårt består av visjonære gjørere, teknologioptimister, forretningsutv
         <LinkWrapper href="https://ntention.com/" target="_blank"><ImageContainer fluid={data.Ntention.childImageSharp.fluid} alt="Ntention"/></LinkWrapper>
         </ImageWrapper>
         <ContainerContentText>
-        Ved å la barna utforske, lære og skape gjennom 3D og AR, skaper vi et mer inkluderende og engasjerende klasserom. Vi gjør dette ved å bygge verdens enkleste verktøy for modellering og Augmented Reality (AR) for barn, slik at de kan bli digitale medskapere og problemløsere.
-<br /> <br />
 Samspillet med maskiner er i stadig endring. Automatiseringen øker, men antall maskiner vi kommuniserer med øker også. Disse forholdene krever nye og enklere måter å samhandle med maskiner på, slik at flere kan kontrollere et større antall maskiner med mindre innsats og trening. Derfor lanserer vi et nytt paradigme for styringssystemer.
 </ContainerContentText>
 </ContainerContentLeft>

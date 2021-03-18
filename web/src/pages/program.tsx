@@ -159,7 +159,7 @@ På StartIT kommer Silvija til å snakke om Norges digitale fremtid og hva den v
     date="18. mars"
     icon={""}
   ><HeaderTitle color={'#BD6631'}>Kveldsarrangement</HeaderTitle>
-  <Paragraph>18:00 åpning ved Eirik Norman Hansen</Paragraph>
+  <Paragraph>18:00 Åpning ved Eirik Norman Hansen</Paragraph>
   <Paragraph>Introduksjon av innovasjonsmiljøet</Paragraph>
   <Paragraph>Cybersecurity ved Visma</Paragraph>
   <Paragraph>Norges digitale fremtid ved Silvija Seres</Paragraph>
@@ -168,7 +168,7 @@ På StartIT kommer Silvija til å snakke om Norges digitale fremtid og hva den v
   <Paragraph>Kvinneprosjektet</Paragraph>
   <Paragraph>Gründertips ved Isabelle Ringnes</Paragraph>
   <Paragraph>F*ck janteloven ved Thomas Anglero</Paragraph>
-  <Paragraph>20:00 avslutning</Paragraph>
+  <Paragraph>20:00 Avslutning</Paragraph>
   </VerticalTimelineElement>
 </VerticalTimeline>
     </Layout>
