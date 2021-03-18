@@ -11,6 +11,7 @@ export default function App() {
     if (video) {
       video.muted = true;
       video.loop = true;
+      video.playsInline = true;
       video.play();
     }
   });

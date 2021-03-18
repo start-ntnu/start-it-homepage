@@ -160,11 +160,13 @@ På StartIT kommer Silvija til å snakke om Norges digitale fremtid og hva den v
     icon={""}
   ><HeaderTitle color={'#BD6631'}>Kveldsarrangement</HeaderTitle>
   <Paragraph>18:00 åpning ved Eirik Norman Hansen</Paragraph>
-  <Paragraph>Norges digitale fremtid ved Silvija Seres</Paragraph>
+  <Paragraph>Introduksjon av innovasjonsmiljøet</Paragraph>
   <Paragraph>Cybersecurity ved Visma</Paragraph>
+  <Paragraph>Norges digitale fremtid ved Silvija Seres</Paragraph>
+  <Paragraph>WasteIQ</Paragraph>
   <Paragraph>Sofaprat - Hvordan er det å være gründer?</Paragraph>
+  <Paragraph>Kvinneprosjektet</Paragraph>
   <Paragraph>Gründertips ved Isabelle Ringnes</Paragraph>
-  <Paragraph>Building a better future ved Nancy Giordano</Paragraph>
   <Paragraph>F*ck janteloven ved Thomas Anglero</Paragraph>
   <Paragraph>20:00 avslutning</Paragraph>
   </VerticalTimelineElement>
