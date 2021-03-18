@@ -30,6 +30,9 @@ export default function Header() {
         </StyledLink>
         <Navbar />
       </HeaderStyle>
+      <MessageWrapper>
+        Dersom du har meldt deg på workshop og ikke har mottatt mail - sjekk spam-mail!
+    </MessageWrapper>
     </Wrapper>
     </>
   );
@@ -76,4 +79,11 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 0px;
   background-color: black;
+`;
+
+const MessageWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  background-color: #BD6631;
+  padding: 5px;
 `;
