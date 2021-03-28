@@ -94,8 +94,7 @@ export default function Gather({ data }) {
     <Layout>
       <Container>
         <Title><span style={{color: '#BD6631'}}>GATHER.</span>TOWN</Title>
-        <SubTitle>Mingling med spennende bedrifter</SubTitle>
-      {<SubTitle>Trykk <a style={{color: '#BD6631'}} href="https://gather.town/app/I9snLMgRdQHUhreP/startIT2021">her</a> for å bli med på festen.</SubTitle>}
+      {<SubTitle>Takk til alle som deltok!</SubTitle>}
       <ContentContainer>
         <ContainerContentLeft>
         <ContainerSubTitle><span style={{color: '#BD6631'}}>Iterate</span></ContainerSubTitle>

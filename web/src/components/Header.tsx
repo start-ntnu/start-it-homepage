@@ -30,9 +30,6 @@ export default function Header() {
         </StyledLink>
         <Navbar />
       </HeaderStyle>
-      <MessageWrapper>
-        Dersom du har meldt deg på arrangementene og ikke har mottatt mail - sjekk spam-mail!
-    </MessageWrapper>
     </Wrapper>
     </>
   );
